@@ -1309,3 +1309,61 @@ i.text-emerald,
     -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 18px, #000 calc(100% - 26px), transparent 100%);
     mask-image: linear-gradient(90deg, transparent 0, #000 18px, #000 calc(100% - 26px), transparent 100%);
 }
+
+/* ============================================================
+   Calculator inputs should read as clickable controls
+   ============================================================ */
+.calc-select-wrap { position: relative; }
+.custom-select, .calc-select-wrap select {
+    width: 100%;
+    appearance: none; -webkit-appearance: none;
+    cursor: pointer;
+    padding: 14px 44px 14px 16px;
+    background: rgba(47, 111, 237, 0.06) !important;
+    border: 1px solid rgba(47, 111, 237, 0.45) !important;
+    border-radius: 10px;
+    color: var(--navy) !important;
+    font-weight: 600;
+    transition: background 0.18s ease, border-color 0.18s ease;
+}
+.custom-select:hover, .calc-select-wrap select:hover {
+    background: rgba(47, 111, 237, 0.12) !important;
+    border-color: var(--blue) !important;
+}
+.custom-select:focus, .calc-select-wrap select:focus {
+    outline: none;
+    border-color: var(--blue) !important;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.18) !important;
+}
+.calc-select-caret {
+    color: var(--blue) !important;
+    pointer-events: none;
+    font-size: 0.8rem;
+}
+
+/* the amount field gets the same treatment */
+.input-display-box {
+    background: rgba(47, 111, 237, 0.06) !important;
+    border: 1px solid rgba(47, 111, 237, 0.45) !important;
+    border-radius: 10px;
+}
+.input-display-box:focus-within {
+    border-color: var(--blue) !important;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.18) !important;
+}
+.input-display-box input { color: var(--navy) !important; font-weight: 700; }
+.input-display-box .currency { color: var(--blue) !important; font-weight: 700; }
+
+/* the two calculator tabs read as a switch */
+.calc-type-switch { border: 1px solid rgba(47, 111, 237, 0.35) !important; background: #ffffff !important; }
+.switch-btn { cursor: pointer; border-radius: 8px; }
+.switch-btn:not(.active):hover { background: rgba(47, 111, 237, 0.10) !important; color: var(--blue) !important; }
+
+/* the active switch follows the blue system too */
+.switch-btn.active, .section-theme-light .switch-btn.active,
+.pricing-tab.active, .section-theme-light .pricing-tab.active {
+    background: var(--blue) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--blue) !important;
+}
+.switch-btn.active i, .pricing-tab.active i { color: #ffffff !important; }
