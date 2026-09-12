@@ -572,3 +572,61 @@ a { color: inherit; }
 .plan-card .spec-row.highlight-row i,
 .section-theme-light .plan-card .spec-row.highlight-row strong { color: #12706c !important; }
 .plan-card .spec-row strong { color: var(--navy); }
+
+/* ---------- hover states inside the dark blocks ---------- */
+/* the generic .btn-outline:hover turns the label navy, which disappears on navy */
+.hero-section .btn-outline:hover,
+.cta-bottom-section .btn-outline:hover,
+.cta-glass-card .btn-outline:hover,
+.partner-glow-card .btn-outline:hover,
+.header .btn-outline:hover,
+.footer .btn-outline:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+.cta-bottom-section .btn-outline:hover i,
+.partner-glow-card .btn-outline:hover i,
+.hero-section .btn-outline:hover i { color: #ffffff; }
+
+/* the white outline button in the bottom CTA keeps navy text on white */
+.cta-bottom-section .btn-outline,
+.cta-glass-card .btn-outline { background: #ffffff; border-color: #ffffff; color: var(--navy); }
+.cta-bottom-section .btn-outline:hover,
+.cta-glass-card .btn-outline:hover { background: #eef2f8; border-color: #eef2f8; color: var(--navy); }
+.cta-bottom-section .btn-outline i,
+.cta-bottom-section .btn-outline:hover i { color: var(--blue); }
+
+/* the second CTA button is .btn-secondary.glass-btn in this page */
+.cta-bottom-section .btn-secondary,
+.cta-glass-card .btn-secondary,
+.hero-section .btn-secondary,
+.glass-btn {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    color: var(--navy);
+}
+.cta-bottom-section .btn-secondary:hover,
+.cta-glass-card .btn-secondary:hover,
+.hero-section .btn-secondary:hover,
+.glass-btn:hover {
+    background: #e8eef8;
+    border-color: #e8eef8;
+    color: var(--navy);
+    box-shadow: none;
+}
+.cta-bottom-section .btn-secondary i,
+.cta-bottom-section .btn-secondary:hover i,
+.glass-btn i, .glass-btn:hover i { color: var(--blue); }
+
+/* partner secondary button was green tinted */
+.btn-partner-secondary {
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #ffffff;
+}
+.btn-partner-secondary:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: #ffffff;
+    color: #ffffff;
+}
