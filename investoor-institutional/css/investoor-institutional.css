@@ -1583,3 +1583,15 @@ a.blog-link:hover, .blog-body a.blog-link:hover {
     color: var(--blue) !important;
 }
 a.blog-link:hover i { color: var(--blue) !important; }
+
+/* body text darker again, close to black for easy reading */
+:root { --ink: #2b3542; }
+body, p, li, span,
+.section-desc, .pillar-desc, .service-desc, .plan-sub, .plan-note,
+.spec-row span, .faq-answer, .faq-item p, .blog-excerpt, .testimonial-text,
+.step-desc, .callout-text, .label, .b-label, .res-subtitle,
+.footer-about-text, .price-foot p, .stats-glass-grid .label,
+.section-theme-light p, .section-theme-light li, .section-theme-light .section-desc,
+.control-label-row, .range-marks, .plan-specs span {
+    color: #2b3542 !important;
+}
