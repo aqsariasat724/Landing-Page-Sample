@@ -1384,3 +1384,16 @@ i.text-emerald,
 .control-label-row, .control-label-row label, .calc-controls label {
     color: var(--navy) !important; font-weight: 600;
 }
+
+/* calculator fields: strongest step */
+.custom-select, .calc-select-wrap select, .input-display-box {
+    background: rgba(47, 111, 237, 0.16) !important;
+    border: 2px solid var(--blue) !important;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12), 0 4px 14px -6px rgba(47, 111, 237, 0.45) !important;
+}
+.custom-select:hover, .calc-select-wrap select:hover, .input-display-box:hover {
+    background: rgba(47, 111, 237, 0.24) !important;
+    box-shadow: 0 0 0 4px rgba(47, 111, 237, 0.16), 0 6px 18px -6px rgba(47, 111, 237, 0.5) !important;
+}
+.custom-select, .calc-select-wrap select, .input-display-box input { color: #12306b !important; }
+.calc-select-caret { color: var(--blue) !important; font-size: 1rem; }
