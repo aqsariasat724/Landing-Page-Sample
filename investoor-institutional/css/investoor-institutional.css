@@ -1,0 +1,463 @@
+/* ============================================================
+   Investoor  |  investoor-institutional.css
+   Institutional colour system, loaded after investor-new.css.
+   Navy + off-white + white, blue and turquoise only as accents.
+   Nothing in the original stylesheet is modified, so this can be
+   removed again by deleting one <link>.
+   ============================================================ */
+
+:root {
+    /* the requested palette */
+    --navy: #0b1f3a;
+    --navy-deep: #071525;
+    --navy-soft: #123055;
+    --offwhite: #f7f9fc;
+    --paper: #ffffff;
+    --blue: #2f6fed;
+    --turq: #27b7b0;
+    --ink: #667085;
+    --line: rgba(11, 31, 58, 0.10);
+    --line-strong: rgba(11, 31, 58, 0.18);
+
+    /* remap of the original tokens */
+    --bg-dark: var(--offwhite);
+    --bg-surface: var(--paper);
+    --bg-card: var(--paper);
+    --bg-card-hover: var(--paper);
+    --bg-glass: var(--paper);
+    --bg-light: var(--paper);
+    --bg-muted: var(--offwhite);
+    --bg-light-card: var(--paper);
+
+    --border-glass: var(--line);
+    --border-light: var(--line);
+    --border-glow: rgba(47, 111, 237, 0.28);
+
+    --primary: var(--blue);
+    --primary-glow: rgba(47, 111, 237, 0.16);
+    --primary-gradient: linear-gradient(180deg, #0b1f3a 0%, #0b1f3a 100%);
+
+    --accent-green: var(--turq);
+    --accent-green-glow: rgba(39, 183, 176, 0.18);
+    --green-gradient: linear-gradient(180deg, #27b7b0 0%, #27b7b0 100%);
+
+    --accent-purple: var(--navy);
+    --accent-amber: #b0862b;
+    --accent-rose: #c2405a;
+
+    --text-primary: var(--navy);
+    --text-secondary: #3d4658;
+    --text-muted: var(--ink);
+    --text-inverse: #ffffff;
+    --ink-on-light: var(--navy);
+    --ink-muted-on-light: var(--ink);
+    --ink-secondary-on-light: #3d4658;
+
+    --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.04), 0 10px 26px -14px rgba(11, 31, 58, 0.22);
+    --shadow-glow: none;
+    --shadow-glow-green: none;
+}
+
+/* ---------- page canvas ---------- */
+body {
+    background: var(--offwhite);
+    color: var(--ink);
+}
+h1, h2, h3, h4, h5, h6,
+.section-title, .hero-title, .plan-title, .pillar-title, .service-title,
+.metric-value, .stat-value, .cs-val, .price-val, .result-value {
+    color: var(--navy);
+}
+p, li, .section-desc, .hero-subtitle, .pillar-desc, .service-desc,
+.plan-note, .spec-row span, .faq-answer, .footer-about-text {
+    color: var(--ink);
+}
+a { color: inherit; }
+.glow-1, .glow-2, .hero-glow, .section-glow { display: none !important; }
+
+/* ---------- top strip and header ---------- */
+.market-ticker, .ticker-bar, .top-strip {
+    background: var(--navy-deep);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.78);
+}
+.site-header, .main-header, header.header {
+    background: var(--navy);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.site-header.scrolled, .main-header.scrolled, header.header.scrolled {
+    background: var(--navy);
+    box-shadow: 0 6px 20px rgba(11, 31, 58, 0.18);
+}
+.nav-link, .header .nav-link { color: rgba(255, 255, 255, 0.82); }
+.nav-link:hover { color: #ffffff; }
+.nav-link.active, .nav-link.is-active { color: #7fa8ff; }
+.dropdown-trigger {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+}
+.dropdown-trigger:hover { background: rgba(255, 255, 255, 0.14); }
+.dropdown-menu {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-card);
+}
+.dropdown-menu a, .dropdown-menu li a { color: var(--navy); }
+.dropdown-menu li:hover, .dropdown-menu li.active { background: rgba(47, 111, 237, 0.08); }
+
+/* ---------- buttons ---------- */
+.btn-primary, .glow-btn, .btn.btn-primary {
+    background: var(--navy);
+    border: 1px solid var(--navy);
+    color: #ffffff;
+    box-shadow: none;
+}
+.btn-primary:hover, .glow-btn:hover { background: var(--navy-soft); border-color: var(--navy-soft); }
+.btn-outline, .btn-secondary {
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    color: var(--navy);
+    backdrop-filter: none;
+}
+.btn-outline:hover, .btn-secondary:hover {
+    background: rgba(47, 111, 237, 0.06);
+    border-color: var(--blue);
+    color: var(--navy);
+}
+.header .btn-primary { background: var(--blue); border-color: var(--blue); }
+.header .btn-primary:hover { background: #2a62d4; border-color: #2a62d4; }
+.header .btn-outline { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.22); color: #ffffff; }
+
+/* ---------- hero stays the premium dark block ---------- */
+.hero-section {
+    background: var(--navy-deep);
+    color: rgba(255, 255, 255, 0.82);
+}
+.hero-section h1, .hero-section .hero-title { color: #ffffff; }
+.hero-section p, .hero-section .hero-subtitle, .hero-section .hero-tagline { color: rgba(255, 255, 255, 0.78); }
+.hero-section .section-subtitle, .hero-section .eyebrow, .hero-section .hero-eyebrow {
+    background: rgba(47, 111, 237, 0.16);
+    border-color: rgba(47, 111, 237, 0.34);
+    color: #9dbcff;
+}
+.hero-section .trust-pill, .hero-section .hero-trust-list li { color: rgba(255, 255, 255, 0.80); }
+.hero-section .btn-outline { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.24); color: #ffffff; }
+.hero-visual, .portal-card, .hero-card, .institutional-portal {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: none;
+}
+.hero-section .metric-box, .hero-section .mini-chart-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.10);
+}
+.hero-section .metric-value, .hero-section .metric-label { color: #ffffff; }
+.hero-section .metric-label, .hero-section small { color: rgba(255, 255, 255, 0.62); }
+
+/* ---------- light sections ---------- */
+.stats-banner-section, .pillars-section, .services-section, .how-it-works-section,
+.calculator-section, .pricing-section, .testimonials-section, .blog-section,
+.partner-section, .faq-section {
+    background: var(--offwhite);
+    color: var(--ink);
+}
+.pillars-section, .how-it-works-section, .testimonials-section, .faq-section {
+    background: var(--paper);
+}
+.section-subtitle, .eyebrow, .section-label {
+    background: rgba(47, 111, 237, 0.08);
+    border: 1px solid rgba(47, 111, 237, 0.20);
+    color: var(--blue);
+}
+
+/* cards and containers */
+.pillar-card, .service-box, .plan-card, .faq-item, .testimonial-card, .blog-card,
+.step-card, .stat-block, .metric-box, .calculator-panel, .calc-box, .result-panel,
+.commission-showcase-box, .partner-glow-card, .modal-content, .info-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: none;
+}
+.pillar-card:hover, .service-box:hover, .plan-card:hover, .blog-card:hover, .testimonial-card:hover {
+    border-color: rgba(47, 111, 237, 0.35);
+    box-shadow: 0 2px 4px rgba(16, 24, 40, 0.04), 0 16px 32px -18px rgba(11, 31, 58, 0.28);
+    transform: none;
+}
+.stat-icon-wrapper, .step-icon, .service-icon, .pillar-icon, .author-avatar {
+    background: rgba(47, 111, 237, 0.08);
+    border: 1px solid rgba(47, 111, 237, 0.18);
+    color: var(--blue);
+}
+.plan-badge { background: rgba(11, 31, 58, 0.06); border: 1px solid var(--line); color: var(--navy); }
+.plan-badge.badge-green { background: rgba(39, 183, 176, 0.10); border-color: rgba(39, 183, 176, 0.28); color: #17807b; }
+.plan-badge.badge-purple { background: rgba(47, 111, 237, 0.08); border-color: rgba(47, 111, 237, 0.22); color: var(--blue); }
+.card-ribbon, .ribbon-popular { background: var(--navy); color: #ffffff; box-shadow: none; }
+.plan-card.featured, .plan-card.is-popular { border-color: var(--navy); box-shadow: 0 2px 4px rgba(16, 24, 40, 0.05), 0 18px 40px -20px rgba(11, 31, 58, 0.35); }
+
+/* calculator */
+.calc-type-switch, .pricing-tabs, .input-display-box, .custom-select {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    color: var(--navy);
+}
+.calc-tab.active, .pricing-tab.active, .calc-type-switch .active {
+    background: var(--navy);
+    color: #ffffff;
+    box-shadow: none;
+}
+.custom-range-slider { background: rgba(11, 31, 58, 0.10); }
+.custom-range-slider::-webkit-slider-thumb { background: var(--blue); border-color: #ffffff; box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.20); }
+.calc-callout, .hint-box {
+    background: rgba(47, 111, 237, 0.06);
+    border: 1px solid rgba(47, 111, 237, 0.18);
+    color: var(--ink);
+}
+.result-panel .result-value, .cs-val, .gain-value { color: var(--navy); }
+.cs-progress-bar { background: rgba(11, 31, 58, 0.10); }
+.cs-progress-fill { background: var(--blue); }
+
+/* accents: turquoise only for positive and status */
+.text-emerald, .dot.green, .positive, .change.up, .up, .status-live {
+    color: var(--turq) !important;
+}
+.text-cyan { color: var(--blue) !important; }
+.text-purple { color: var(--navy) !important; }
+.text-amber { color: var(--accent-amber) !important; }
+.gradient-text-green, .gradient-accent {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    color: var(--turq);
+}
+
+/* ---------- partner and bottom CTA as the second dark block ---------- */
+.partner-glow-card {
+    background: var(--navy);
+    border: 1px solid var(--navy);
+    color: rgba(255, 255, 255, 0.82);
+    box-shadow: none;
+}
+.partner-glow-card h2, .partner-glow-card .partner-title, .partner-glow-card .perk-num { color: #ffffff; }
+.partner-glow-card p, .partner-glow-card .perk-label { color: rgba(255, 255, 255, 0.74); }
+.partner-glow-card .perk-item, .partner-glow-card .commission-showcase-box {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.14);
+    box-shadow: none;
+}
+.partner-glow-card .btn-outline { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.24); color: #ffffff; }
+.partner-glow-card .btn-primary { background: var(--blue); border-color: var(--blue); }
+
+.cta-bottom-section, .cta-glass-card {
+    background: var(--navy-deep);
+    border: none;
+    color: rgba(255, 255, 255, 0.80);
+}
+.cta-bottom-section h2, .cta-glass-card h2, .cta-title { color: #ffffff; }
+.cta-bottom-section p, .cta-glass-card p { color: rgba(255, 255, 255, 0.74); }
+.cta-bottom-section .btn-outline { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.24); color: #ffffff; }
+
+/* ---------- footer ---------- */
+.footer, .site-footer { background: var(--navy-deep); color: rgba(255, 255, 255, 0.70); }
+.footer h4, .footer-col h4, .footer-title { color: #ffffff; }
+.footer a, .footer-links a { color: rgba(255, 255, 255, 0.70); }
+.footer a:hover, .footer-links a:hover { color: #ffffff; }
+.footer-bottom { background: var(--navy-deep); border-top: 1px solid rgba(255, 255, 255, 0.10); }
+.footer-social-links a { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.14); color: #ffffff; }
+
+/* ---------- quieter motion, as requested ---------- */
+.pillar-card, .service-box, .plan-card, .blog-card, .testimonial-card, .btn {
+    transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.btn:hover { transform: none; }
+
+/* ============================================================
+   Corrections for this page's actual class names
+   ============================================================ */
+
+/* hero headline is a gradient span in the original file */
+.hero-title, .hero-title .hero-capital, .hero-section .gradient-text {
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+    color: #ffffff !important;
+}
+
+/* hero dashboard card stays dark inside the navy hero */
+.hero-section .visual-card,
+.hero-section .main-dashboard-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: none;
+    backdrop-filter: none;
+}
+.hero-section .metric-box,
+.hero-section .mini-chart-container,
+.hero-section .card-title-pill,
+.hero-section .status-indicator {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: none;
+}
+.hero-section .dash-amount,
+.hero-section .dash-amount .cents,
+.hero-section .metric-value,
+.hero-section .card-title-pill { color: #ffffff; }
+.hero-section .dash-label,
+.hero-section .metric-label,
+.hero-section .dash-sub,
+.hero-section .chart-caption { color: rgba(255, 255, 255, 0.62); }
+.hero-section .status-indicator, .hero-section .status-dot { color: var(--turq); }
+.hero-section .metric-value.text-cyan { color: #9dbcff; }
+
+/* stats strip under the hero */
+.stats-glass-grid {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-card);
+}
+.stat-card .number, .stats-glass-grid .number { color: var(--navy); }
+.stat-card .label, .stats-glass-grid .label { color: var(--ink); }
+.stat-card:not(:last-child) { border-right: 1px solid var(--line); }
+
+/* market strip on navy */
+.market-ticker .ticker-item, .market-ticker span, .ticker-bar span { color: rgba(255, 255, 255, 0.72); }
+.market-ticker .val, .ticker-bar .val, .market-ticker b { color: #ffffff; }
+
+/* featured pillar card was a dark gradient in the original */
+.pillar-card.featured, .plan-card.featured, .service-box.featured {
+    background: var(--paper);
+    border: 1px solid var(--navy);
+    box-shadow: 0 2px 4px rgba(16, 24, 40, 0.05), 0 18px 40px -20px rgba(11, 31, 58, 0.32);
+}
+.pillar-card.featured .pillar-title,
+.pillar-card.featured h3 { color: var(--navy); }
+.pillar-card.featured p,
+.pillar-card.featured li,
+.pillar-card.featured .pillar-desc { color: var(--ink); }
+.pillar-card.featured .pillar-meta,
+.pillar-card.featured .pillar-range { color: var(--blue); }
+
+/* market strip labels a touch brighter on navy */
+.market-ticker, .ticker-bar, .top-strip { color: rgba(255, 255, 255, 0.80); }
+.market-ticker .ticker-label, .ticker-bar .ticker-label,
+.market-ticker .name, .ticker-item .name { color: rgba(255, 255, 255, 0.72); }
+.hero-section .metric-label, .hero-section .dash-label { color: rgba(255, 255, 255, 0.70); }
+
+/* ---------- calculator ---------- */
+.calculator-glass-box {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: none;
+}
+.calc-title, .calc-header-row h2, .res-card-header, .calc-result-card h3 { color: var(--navy); }
+.control-label-row, .control-label-row label, .range-marks, .calc-controls label { color: var(--ink); }
+.calc-type-switch { background: var(--offwhite); border: 1px solid var(--line); }
+.switch-btn { color: var(--ink); }
+.switch-btn.active { background: var(--navy); color: #ffffff; box-shadow: none; }
+.input-display-box, .custom-select, .calc-select-wrap select {
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    color: var(--navy);
+}
+.input-display-box .currency, .calc-select-caret { color: var(--blue); }
+.calc-result-card {
+    background: var(--offwhite);
+    border: 1px solid var(--line);
+    box-shadow: none;
+}
+.calc-result-card .res-label, .calc-result-card small, .res-row span { color: var(--ink); }
+.calc-result-card .res-value, .calc-result-card strong, .res-total { color: var(--navy); }
+.live-pill { background: rgba(39, 183, 176, 0.10); border: 1px solid rgba(39, 183, 176, 0.28); color: #17807b; }
+.calc-callout { background: rgba(47, 111, 237, 0.06); border: 1px solid rgba(47, 111, 237, 0.18); }
+.callout-title { color: var(--navy); }
+.callout-text { color: var(--ink); }
+.callout-icon { color: var(--blue); }
+
+/* result card details */
+.res-subtitle, .b-label { color: var(--ink); }
+.res-amount, .main-return-display .res-amount { color: var(--navy); }
+.b-value { color: var(--navy); }
+.b-value.text-emerald { color: #17807b; }
+.res-gain-badge {
+    background: rgba(39, 183, 176, 0.10);
+    border: 1px solid rgba(39, 183, 176, 0.28);
+    color: #17807b;
+}
+.res-breakdown-list .breakdown-item { border-color: var(--line); }
+
+/* section eyebrows stay one accent colour */
+.section-subtitle, .section-subtitle i { color: var(--blue) !important; }
+
+/* ---------- plan cards: readable badges, rows and links ---------- */
+.plan-badge {
+    background: rgba(11, 31, 58, 0.06);
+    border: 1px solid var(--line);
+    color: var(--navy);
+}
+.plan-badge.badge-green { background: rgba(39, 183, 176, 0.12); border-color: rgba(39, 183, 176, 0.30); color: #12706c; }
+.plan-badge.badge-purple { background: rgba(47, 111, 237, 0.10); border-color: rgba(47, 111, 237, 0.24); color: #2554b0; }
+.plan-title, .price-val, .currency { color: var(--navy); }
+.price-period, .spec-row span { color: var(--ink); }
+.spec-row strong { color: var(--navy); }
+.spec-row.highlight-row {
+    background: rgba(39, 183, 176, 0.08);
+    border: 1px solid rgba(39, 183, 176, 0.22);
+    border-radius: 8px;
+}
+.spec-row.highlight-row strong, .spec-row.highlight-row span { color: #12706c; }
+.spec-row i { color: var(--blue); }
+.plan-info-trigger {
+    color: var(--blue);
+    border-color: rgba(47, 111, 237, 0.30);
+}
+.plan-info-trigger:hover { color: #2554b0; border-color: var(--blue); }
+.pricing-tab { color: var(--ink); }
+.pricing-tab.active { background: var(--navy); color: #ffffff; box-shadow: none; }
+.card-ribbon, .ribbon-popular { background: var(--navy); color: #ffffff; }
+
+/* ---------- dark blocks: force readable text over navy ---------- */
+.footer, .footer *,
+.cta-bottom-section, .cta-bottom-section *,
+.partner-glow-card, .partner-glow-card * {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+.footer, .footer p, .footer li, .footer span, .footer a,
+.footer-about-text, .footer-links a, .footer-contact-list li {
+    color: rgba(255, 255, 255, 0.72);
+}
+.footer h4, .footer-col h4, .footer-title, .footer strong { color: #ffffff; }
+.footer a:hover, .footer-links a:hover { color: #ffffff; }
+.footer-links i, .footer-contact-list i { color: var(--blue); }
+.footer-bottom, .footer-bottom p, .footer-bottom span { color: rgba(255, 255, 255, 0.55); }
+
+.cta-bottom-section p, .cta-glass-card p { color: rgba(255, 255, 255, 0.76); }
+.cta-bottom-section .btn-primary, .cta-glass-card .btn-primary,
+.partner-glow-card .btn-primary {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #ffffff;
+}
+.cta-bottom-section .btn-primary:hover, .partner-glow-card .btn-primary:hover {
+    background: #2a62d4; border-color: #2a62d4;
+}
+.cta-bottom-section .btn-outline, .cta-glass-card .btn-outline {
+    background: #ffffff; border-color: #ffffff; color: var(--navy);
+}
+.partner-glow-card .section-subtitle, .cta-bottom-section .section-subtitle {
+    background: rgba(47, 111, 237, 0.18);
+    border-color: rgba(47, 111, 237, 0.38);
+    color: #9dbcff !important;
+}
+.partner-glow-card .gradient-text-green,
+.partner-title .gradient-text-green {
+    background: none !important;
+    -webkit-text-fill-color: var(--turq) !important;
+    color: var(--turq) !important;
+}
+
+/* footer nav uses its own selector in the original file */
+.footer-nav li a, .footer-nav li a i { color: rgba(255, 255, 255, 0.72); }
+.footer-nav li a:hover { color: #ffffff; transform: none; }
+.footer-contact-list, .footer-contact-list li, .footer-contact-list span { color: rgba(255, 255, 255, 0.72); }
+.footer-contact-list strong { color: #ffffff; }
