@@ -751,3 +751,99 @@ i.text-emerald,
     border: none;
     letter-spacing: 0.04em;
 }
+
+/* ---------- stats strip under the hero ---------- */
+.stats-banner-section { padding-top: 0; padding-bottom: 0; }
+.stats-glass-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+    padding: 0;
+    margin: -34px auto 0;
+    border-radius: var(--radius-md, 14px);
+    overflow: hidden;
+}
+.stats-glass-grid .stat-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px 24px;
+    min-height: 96px;
+    border-right: 1px solid var(--line);
+    border-bottom: none;
+}
+.stats-glass-grid .stat-card:last-child { border-right: none; }
+.stats-glass-grid .stat-icon-wrapper {
+    width: 44px; height: 44px; flex: 0 0 44px;
+    display: grid; place-items: center;
+    border-radius: 10px;
+}
+.stats-glass-grid .stat-numbers { display: flex; flex-direction: column; justify-content: center; }
+.stats-glass-grid .number {
+    font-size: 1.12rem; line-height: 1.25; color: var(--navy); margin-bottom: 2px;
+}
+.stats-glass-grid .label { font-size: 0.82rem; line-height: 1.35; color: var(--ink); }
+
+@media (max-width: 992px) {
+    .stats-glass-grid { grid-template-columns: 1fr 1fr; margin-top: -24px; }
+    .stats-glass-grid .stat-card:nth-child(2) { border-right: none; }
+    .stats-glass-grid .stat-card:nth-child(1),
+    .stats-glass-grid .stat-card:nth-child(2) { border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 560px) {
+    .stats-glass-grid { grid-template-columns: 1fr; margin-top: -18px; }
+    .stats-glass-grid .stat-card { border-right: none; border-bottom: 1px solid var(--line); min-height: 0; }
+    .stats-glass-grid .stat-card:last-child { border-bottom: none; }
+}
+
+/* ---------- the three product buttons: lighter and friendlier ---------- */
+.btn-pillar,
+.btn-pillar-cyan,
+.btn-pillar-purple,
+.section-theme-light .btn-pillar {
+    background: rgba(47, 111, 237, 0.08) !important;
+    border: 1px solid rgba(47, 111, 237, 0.28) !important;
+    color: var(--blue) !important;
+    font-weight: 600;
+    box-shadow: none !important;
+}
+.btn-pillar i, .btn-pillar span { color: var(--blue) !important; }
+
+.btn-pillar:hover,
+.btn-pillar-cyan:hover,
+.btn-pillar-purple:hover {
+    background: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: #ffffff !important;
+    transform: none;
+}
+.btn-pillar:hover i, .btn-pillar:hover span { color: #ffffff !important; }
+
+/* the recommended product keeps the solid accent, so the hierarchy stays clear */
+.btn-pillar-emerald,
+.section-theme-light .btn-pillar-emerald {
+    background: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: #ffffff !important;
+}
+.btn-pillar-emerald i, .btn-pillar-emerald span { color: #ffffff !important; }
+.btn-pillar-emerald:hover {
+    background: #2a62d4 !important;
+    border-color: #2a62d4 !important;
+    color: #ffffff !important;
+}
+
+/* the featured product keeps the solid accent button */
+.pillar-card.featured .btn-pillar,
+.pillar-card.featured .btn-pillar-cyan,
+.section-theme-light .pillar-card.featured .btn-pillar {
+    background: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: #ffffff !important;
+}
+.pillar-card.featured .btn-pillar i,
+.pillar-card.featured .btn-pillar span { color: #ffffff !important; }
+.pillar-card.featured .btn-pillar:hover {
+    background: #2a62d4 !important;
+    border-color: #2a62d4 !important;
+}
