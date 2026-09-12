@@ -1145,3 +1145,44 @@ i.text-emerald,
     .stats-glass-grid .number { font-size: 0.92rem; }
     .stats-glass-grid .label { font-size: 0.74rem; white-space: nowrap; }
 }
+
+/* ============================================================
+   Card outlines: clearer and in the accent tone
+   ============================================================ */
+:root { --line: rgba(47, 111, 237, 0.20); --line-strong: rgba(47, 111, 237, 0.32); }
+
+.stats-glass-grid,
+.pillar-card, .service-box, .plan-card, .faq-item, .testimonial-card, .blog-card,
+.step-card, .stat-block, .calculator-glass-box, .calc-result-card,
+.commission-showcase-box, .modal-content, .info-card, .price-foot,
+.section-theme-light .pillar-card, .section-theme-light .plan-card,
+.section-theme-light .faq-item, .section-theme-light .testimonial-card,
+.section-theme-light .blog-card, .section-theme-light .service-box {
+    border: 1px solid rgba(47, 111, 237, 0.22) !important;
+}
+.stats-glass-grid .stat-card:not(:last-child) { border-right: 1px solid rgba(47, 111, 237, 0.18) !important; }
+
+.pillar-card:hover, .plan-card:hover, .service-box:hover,
+.blog-card:hover, .testimonial-card:hover, .faq-item:hover {
+    border-color: rgba(47, 111, 237, 0.45) !important;
+}
+.pillar-card.featured, .plan-card.popular-plan {
+    border-color: rgba(47, 111, 237, 0.55) !important;
+}
+.spec-row.highlight-row { border-color: rgba(39, 183, 176, 0.30) !important; }
+
+/* the 01 / 02 / 03 markers were solid navy squares */
+.pillar-card .card-ribbon, .section-theme-light .pillar-card .card-ribbon {
+    background: rgba(47, 111, 237, 0.10) !important;
+    border: 1px solid rgba(47, 111, 237, 0.26) !important;
+    color: var(--blue) !important;
+    font-weight: 700;
+}
+.pillar-icon-box, .pillar-icon-box.bg-gradient-cyan {
+    background: rgba(47, 111, 237, 0.10) !important;
+    border: 1px solid rgba(47, 111, 237, 0.22) !important;
+    color: var(--blue) !important;
+    background-image: none !important;
+}
+.pillar-icon-box i { color: var(--blue) !important; }
+.pillar-key-figure { color: var(--blue) !important; }
