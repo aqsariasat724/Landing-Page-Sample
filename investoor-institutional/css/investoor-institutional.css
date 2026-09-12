@@ -630,3 +630,18 @@ a { color: inherit; }
     border-color: #ffffff;
     color: #ffffff;
 }
+
+/* the "individual advice" button was amber with white text, unreadable and off palette */
+.btn-advice-amber, .section-theme-light .btn-advice-amber {
+    background: var(--navy);
+    border: 1px solid var(--navy);
+    color: #ffffff;
+    box-shadow: none;
+}
+.btn-advice-amber:hover, .section-theme-light .btn-advice-amber:hover {
+    background: var(--navy-soft);
+    border-color: var(--navy-soft);
+    color: #ffffff;
+}
+.btn-advice-amber i, .btn-advice-amber span,
+.btn-advice-amber:hover i, .btn-advice-amber:hover span { color: #ffffff !important; }
