@@ -1367,3 +1367,20 @@ i.text-emerald,
     border: 1px solid var(--blue) !important;
 }
 .switch-btn.active i, .pricing-tab.active i { color: #ffffff !important; }
+
+/* the two calculator fields a step more prominent */
+.custom-select, .calc-select-wrap select, .input-display-box {
+    background: rgba(47, 111, 237, 0.12) !important;
+    border: 2px solid rgba(47, 111, 237, 0.62) !important;
+    box-shadow: 0 2px 10px -4px rgba(47, 111, 237, 0.35) !important;
+}
+.custom-select:hover, .calc-select-wrap select:hover, .input-display-box:hover {
+    background: rgba(47, 111, 237, 0.18) !important;
+    border-color: var(--blue) !important;
+}
+.custom-select, .calc-select-wrap select { font-weight: 700; color: var(--navy) !important; }
+.calc-select-caret { font-size: 0.95rem; color: var(--blue) !important; }
+.input-display-box input { font-size: 1.05rem; }
+.control-label-row, .control-label-row label, .calc-controls label {
+    color: var(--navy) !important; font-weight: 600;
+}
