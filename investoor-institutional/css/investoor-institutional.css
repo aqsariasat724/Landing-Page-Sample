@@ -1239,3 +1239,33 @@ i.text-emerald,
 }
 
 .blog-body > a, .blog-read-more, .post-link, .card-link { align-self: flex-start; width: auto; }
+
+/* strip sits fully inside the light section instead of overlapping the hero */
+.stats-banner-section { padding-top: 28px; padding-bottom: 8px; }
+.stats-glass-grid { margin-top: 0 !important; }
+@media (max-width: 992px) { .stats-glass-grid { margin-top: 0 !important; } }
+@media (max-width: 560px) { .stats-glass-grid { margin-top: 0 !important; } }
+
+/* outlines one more step, everywhere */
+.stats-glass-grid,
+.pillar-card, .service-box, .plan-card, .faq-item, .testimonial-card, .blog-card,
+.step-card, .calculator-glass-box, .calc-result-card, .commission-showcase-box,
+.modal-content, .price-foot, .metric-box, .mini-chart-container,
+.section-theme-light .pillar-card, .section-theme-light .plan-card,
+.section-theme-light .faq-item, .section-theme-light .testimonial-card,
+.section-theme-light .blog-card, .section-theme-light .service-box,
+.section-theme-light .step-card, .section-theme-light .calc-result-card {
+    border: 1px solid rgba(47, 111, 237, 0.42) !important;
+}
+.stats-glass-grid .stat-card:not(:last-child) { border-right: 1px solid rgba(47, 111, 237, 0.32) !important; }
+.pillar-card:hover, .plan-card:hover, .service-box:hover, .blog-card:hover,
+.testimonial-card:hover, .faq-item:hover, .step-card:hover {
+    border-color: rgba(47, 111, 237, 0.70) !important;
+}
+.pillar-card.featured, .plan-card.popular-plan { border-color: rgba(47, 111, 237, 0.75) !important; }
+
+/* inside the dark hero the card keeps a light edge, not a blue one */
+.hero-section .visual-card, .hero-section .main-dashboard-card,
+.hero-section .metric-box, .hero-section .mini-chart-container {
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+}
