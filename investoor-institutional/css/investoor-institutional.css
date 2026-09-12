@@ -645,3 +645,50 @@ a { color: inherit; }
 }
 .btn-advice-amber i, .btn-advice-amber span,
 .btn-advice-amber:hover i, .btn-advice-amber:hover span { color: #ffffff !important; }
+
+/* ============================================================
+   Final alignment: only the seven brief colours remain
+   ============================================================ */
+:root {
+    /* the brief has one body-text grey, so no in-between tone */
+    --text-secondary: #667085;
+    --ink-secondary-on-light: #667085;
+}
+.section-theme-light p, .section-theme-light li, .section-theme-light span,
+.hero-description, .trust-pill, .plan-note, .service-desc, .pillar-desc { color: var(--ink); }
+
+/* leftover cyan and mint tones from the previous design */
+[style*="A5F3FC"], .text-cyan-200, .text-light-cyan { color: var(--blue) !important; }
+.section-theme-light [class*="cyan"], .section-theme-light [class*="emerald"] { color: #12706c; }
+.text-cyan, .text-cyan i, .text-cyan-300 { color: var(--blue) !important; }
+.text-emerald-300, .text-green-300 { color: #12706c !important; }
+.res-card-header i, .live-pill i { color: #12706c !important; }
+
+/* the window dots in the portal mock follow the palette */
+.dots-group .dot.red { background: #c2405a !important; }
+.dots-group .dot.yellow { background: var(--ink) !important; }
+.dots-group .dot.green { background: var(--turq) !important; }
+
+/* last off-palette elements found by the audit */
+.plan-card strong.text-cyan,
+.spec-row strong.text-cyan,
+strong.text-cyan { color: var(--blue) !important; }
+.b-value.text-emerald,
+i.text-emerald,
+.res-breakdown-list .text-emerald { color: #12706c !important; }
+.blog-category, .section-theme-light .blog-category {
+    background: rgba(47, 111, 237, 0.10) !important;
+    border: 1px solid rgba(47, 111, 237, 0.22) !important;
+    color: var(--blue) !important;
+}
+.market-ticker .change.down, .change.down { color: #b3576d !important; }
+.section-subtitle.text-emerald { color: var(--blue) !important; }
+
+/* these are set with !important and a two-class selector in the original file */
+.plan-card .spec-row span i.text-cyan,
+.plan-card .spec-row strong.text-cyan,
+.plan-card .spec-row .text-cyan { color: var(--blue) !important; }
+.calc-result-card .b-value.text-emerald,
+.calc-result-card .text-emerald { color: #12706c !important; }
+.calc-select-caret { color: var(--blue); }
+.btn-partner-secondary i { color: #ffffff; }
