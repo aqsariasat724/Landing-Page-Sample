@@ -1595,3 +1595,29 @@ body, p, li, span,
 .control-label-row, .range-marks, .plan-specs span {
     color: #2b3542 !important;
 }
+
+/* ============================================================
+   Plan badges: one accent per product family, no extra blue
+   ============================================================ */
+.plan-card[data-category="academy"] .plan-badge,
+.section-theme-light .plan-card[data-category="academy"] .plan-badge {
+    background: rgba(39, 183, 176, 0.16) !important;
+    border: 1px solid rgba(39, 183, 176, 0.45) !important;
+    color: #0f6460 !important;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.plan-card[data-category="festanlage"] .plan-badge,
+.section-theme-light .plan-card[data-category="festanlage"] .plan-badge {
+    background: rgba(11, 31, 58, 0.08) !important;
+    border: 1px solid rgba(11, 31, 58, 0.28) !important;
+    color: var(--navy) !important;
+    font-weight: 700;
+}
+.plan-card[data-category="trading"] .plan-badge,
+.section-theme-light .plan-card[data-category="trading"] .plan-badge {
+    background: rgba(47, 111, 237, 0.12) !important;
+    border: 1px solid rgba(47, 111, 237, 0.34) !important;
+    color: #2554b0 !important;
+    font-weight: 700;
+}
