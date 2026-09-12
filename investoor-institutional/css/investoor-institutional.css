@@ -1621,3 +1621,25 @@ body, p, li, span,
     color: #2554b0 !important;
     font-weight: 700;
 }
+
+/* both tabs look like the solid button; the selected one is a shade deeper */
+.switch-btn, .pricing-tab,
+.section-theme-light .switch-btn, .section-theme-light .pricing-tab {
+    background: var(--blue) !important;
+    border: 1px solid var(--blue) !important;
+    color: #ffffff !important;
+}
+.switch-btn i, .pricing-tab i { color: #ffffff !important; }
+.switch-btn:hover, .pricing-tab:hover {
+    background: #ffffff !important;
+    border-color: rgba(47, 111, 237, 0.45) !important;
+    color: var(--blue) !important;
+}
+.switch-btn:hover i, .pricing-tab:hover i { color: var(--blue) !important; }
+.switch-btn.active, .pricing-tab.active,
+.section-theme-light .switch-btn.active, .section-theme-light .pricing-tab.active {
+    background: #1f4fb5 !important;
+    border-color: #1f4fb5 !important;
+    color: #ffffff !important;
+}
+.switch-btn.active i, .pricing-tab.active i { color: #ffffff !important; }
