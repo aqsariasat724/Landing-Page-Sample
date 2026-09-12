@@ -1397,3 +1397,21 @@ i.text-emerald,
 }
 .custom-select, .calc-select-wrap select, .input-display-box input { color: #12306b !important; }
 .calc-select-caret { color: var(--blue) !important; font-size: 1rem; }
+
+/* FAQ entries on a light grey ground so they stand out from the white section */
+.faq-section, .section-theme-light.faq-section { background: var(--paper); }
+.faq-item, .section-theme-light .faq-item {
+    background: #eef1f6 !important;
+    border: 1px solid rgba(47, 111, 237, 0.30) !important;
+}
+.faq-item:hover, .section-theme-light .faq-item:hover {
+    background: #e8ecf4 !important;
+    border-color: rgba(47, 111, 237, 0.55) !important;
+}
+.faq-item.active, .faq-item.open, .faq-item.is-open {
+    background: #eef1f6 !important;
+    border-color: var(--blue) !important;
+}
+.faq-question, .faq-item button { color: var(--navy) !important; font-weight: 600; }
+.faq-question i, .faq-item button i { color: var(--blue) !important; }
+.faq-answer, .faq-item p { color: var(--ink) !important; }
