@@ -1349,6 +1349,10 @@ document.addEventListener('DOMContentLoaded', function () {
             var code = a.getAttribute('data-lang').toUpperCase();
             var srcFlag = a.querySelector('.lang-flag');
 
+            if (window.INV_PREVIEW_I18N) {
+                window.INV_PREVIEW_I18N.apply(a.getAttribute('data-lang') === 'en' ? 'en' : 'de');
+            }
+
             if (dropdown) {
                 var label = dropdown.querySelector('.lang-code');
                 var flag = dropdown.querySelector('.dropdown-trigger .lang-flag');
@@ -1369,5 +1373,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
+<script src="preview-i18n.js"></script>
 </body>
 </html>
