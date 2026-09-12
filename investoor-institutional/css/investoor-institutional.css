@@ -931,3 +931,80 @@ i.text-emerald,
     letter-spacing: 0.04em;
 }
 .plan-card.popular-plan { border-color: var(--blue) !important; }
+
+/* ============================================================
+   FINAL BUTTON RULE (client request)
+   every button is white by default and turns blue on hover
+   ============================================================ */
+.btn,
+.btn-primary, .btn-secondary, .btn-outline, .glass-btn, .glow-btn,
+.btn-pillar, .btn-pillar-cyan, .btn-pillar-emerald, .btn-pillar-purple,
+.btn-advice-amber, .btn-partner-secondary,
+.section-theme-light .btn, .section-theme-light .btn-primary,
+.plan-card .btn-pillar, .calc-result-card .btn-primary,
+.hero-section .btn, .hero-section .btn-primary, .hero-section .btn-secondary,
+.cta-bottom-section .btn, .cta-bottom-section .btn-primary, .cta-bottom-section .btn-secondary,
+.partner-glow-card .btn, .partner-glow-card .btn-primary,
+.header .btn, .header .btn-primary, .drawer .btn, .drawer .btn-primary {
+    background: #ffffff !important;
+    border: 1px solid rgba(47, 111, 237, 0.35) !important;
+    color: var(--blue) !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+.btn i, .btn span,
+.btn-primary i, .btn-primary span,
+.btn-pillar i, .btn-pillar span,
+.btn-advice-amber i, .btn-advice-amber span { color: var(--blue) !important; }
+
+.btn:hover,
+.btn-primary:hover, .btn-secondary:hover, .btn-outline:hover, .glass-btn:hover, .glow-btn:hover,
+.btn-pillar:hover, .btn-pillar-cyan:hover, .btn-pillar-emerald:hover, .btn-pillar-purple:hover,
+.btn-advice-amber:hover, .btn-partner-secondary:hover,
+.section-theme-light .btn:hover, .plan-card .btn-pillar:hover,
+.calc-result-card .btn-primary:hover,
+.hero-section .btn:hover, .cta-bottom-section .btn:hover,
+.partner-glow-card .btn:hover, .header .btn:hover, .drawer .btn:hover {
+    background: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: #ffffff !important;
+}
+.btn:hover i, .btn:hover span,
+.btn-primary:hover i, .btn-primary:hover span,
+.btn-pillar:hover i, .btn-pillar:hover span,
+.btn-advice-amber:hover i, .btn-advice-amber:hover span { color: #ffffff !important; }
+
+/* three buttons carried higher-specificity rules from the blocks above */
+.hero-section .btn-primary.glow-btn,
+.section-theme-light .btn-primary.glow-btn,
+.calc-result-card .btn-primary.glow-btn,
+.pillar-card.featured .btn-pillar,
+.pillar-card.featured .btn-pillar-cyan,
+.section-theme-light .pillar-card.featured .btn-pillar,
+.plan-card .btn-pillar.btn-pillar-cyan,
+.plan-card .btn-pillar.btn-pillar-emerald,
+.plan-card .btn-pillar.btn-pillar-purple {
+    background: #ffffff !important;
+    border: 1px solid rgba(47, 111, 237, 0.35) !important;
+    color: var(--blue) !important;
+}
+.hero-section .btn-primary.glow-btn i, .hero-section .btn-primary.glow-btn span,
+.section-theme-light .btn-primary.glow-btn i, .section-theme-light .btn-primary.glow-btn span,
+.calc-result-card .btn-primary.glow-btn i, .calc-result-card .btn-primary.glow-btn span,
+.pillar-card.featured .btn-pillar i, .pillar-card.featured .btn-pillar span { color: var(--blue) !important; }
+
+.hero-section .btn-primary.glow-btn:hover,
+.section-theme-light .btn-primary.glow-btn:hover,
+.calc-result-card .btn-primary.glow-btn:hover,
+.pillar-card.featured .btn-pillar:hover,
+.pillar-card.featured .btn-pillar-cyan:hover,
+.plan-card .btn-pillar.btn-pillar-cyan:hover,
+.plan-card .btn-pillar.btn-pillar-emerald:hover,
+.plan-card .btn-pillar.btn-pillar-purple:hover {
+    background: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: #ffffff !important;
+}
+.hero-section .btn-primary.glow-btn:hover i, .hero-section .btn-primary.glow-btn:hover span,
+.calc-result-card .btn-primary.glow-btn:hover i, .calc-result-card .btn-primary.glow-btn:hover span,
+.pillar-card.featured .btn-pillar:hover i, .pillar-card.featured .btn-pillar:hover span { color: #ffffff !important; }
