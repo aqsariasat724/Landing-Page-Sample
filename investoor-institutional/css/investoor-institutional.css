@@ -1717,3 +1717,45 @@ body, p, li, span,
 }
 .switch-btn:hover i, .pricing-tab:hover i,
 .switch-btn.active:hover i, .pricing-tab.active:hover i { color: rgb(47, 111, 237) !important; }
+
+/* ============================================================
+   READABILITY PASS
+   dark strips kept light text, small blue labels darkened
+   ============================================================ */
+
+/* top bar market strip */
+.top-bar, .top-bar * { color: rgba(255, 255, 255, 0.86) !important; }
+.top-bar .market-label { color: #ffffff !important; font-weight: 700 !important; }
+.top-bar .q-name { color: rgba(255, 255, 255, 0.72) !important; }
+.top-bar .q-val { color: #ffffff !important; font-weight: 700 !important; }
+.top-bar .q-chg.up { color: #4ade80 !important; }
+.top-bar .q-chg.down { color: #ff8b8b !important; }
+.top-bar .market-note { color: rgba(255, 255, 255, 0.62) !important; }
+.top-bar .top-fact, .top-bar .top-fact i { color: rgba(255, 255, 255, 0.88) !important; }
+
+/* footer */
+.footer, .footer p, .footer li, .footer span, .footer div, .footer small,
+.footer strong, .footer b, .footer .footer-about, .footer .copyright-text {
+    color: rgba(255, 255, 255, 0.84) !important;
+}
+.footer .footer-heading, .footer h4, .footer h3 { color: #ffffff !important; }
+.footer .copyright-text, .footer .copyright-text strong { color: rgba(255, 255, 255, 0.9) !important; }
+.footer .footer-risk-disclaimer, .footer .footer-risk-disclaimer * {
+    color: rgba(255, 255, 255, 0.66) !important;
+}
+.footer a, .footer .footer-nav a, .footer .footer-contact-list a { color: #9dbeff !important; }
+.footer a:hover, .footer .footer-nav a:hover { color: #ffffff !important; }
+.footer .footer-nav a i, .footer .footer-contact-list i { color: #5c8dff !important; }
+.footer .footer-contact-list i.text-cyan { color: #3ecfc8 !important; }
+.footer .footer-contact-list i.text-emerald { color: #4ade80 !important; }
+.footer .footer-contact-list i.text-amber { color: #f5c451 !important; }
+.footer .footer-contact-list i.text-purple { color: #a99bff !important; }
+
+/* small blue labels on light backgrounds */
+.section-subtitle, .section-theme-light .section-subtitle,
+.section-subtitle.text-emerald, .blog-category,
+.section-theme-light .blog-category { color: #1f4fb5 !important; }
+/* the same label sits on the dark closing block, keep it light there */
+.cta-bottom-section .section-subtitle,
+.cta-bottom-section .section-subtitle.text-emerald,
+.cta-bottom-section .section-subtitle i { color: #9dbeff !important; }
