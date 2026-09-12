@@ -1547,3 +1547,39 @@ a:not(.btn):not(.nav-link) { color: var(--blue) !important; }
 .footer-bottom, .footer-bottom p, .footer-bottom span { color: rgba(255, 255, 255, 0.62) !important; }
 .q-name { color: rgba(255, 255, 255, 0.66) !important; }
 .market-note { color: rgba(255, 255, 255, 0.52) !important; }
+
+/* blog "Starten" buttons follow the same button system as the rest */
+.blog-body > a, .blog-read-more, .blog-card .read-more, .post-link, .card-link {
+    background: var(--blue) !important;
+    border: 1px solid var(--blue) !important;
+    color: #ffffff !important;
+}
+.blog-body > a i, .blog-read-more i, .post-link i,
+.blog-body > a span, .blog-read-more span { color: #ffffff !important; }
+.blog-body > a:hover, .blog-read-more:hover, .blog-card .read-more:hover,
+.post-link:hover, .card-link:hover {
+    background: #ffffff !important;
+    border-color: rgba(47, 111, 237, 0.45) !important;
+    color: var(--blue) !important;
+}
+.blog-body > a:hover i, .blog-read-more:hover i { color: var(--blue) !important; }
+
+/* the generic link rule above turned this label blue on a blue button */
+a.blog-link, .blog-body a.blog-link, .blog-card a.blog-link {
+    background: var(--blue) !important;
+    border: 1px solid var(--blue) !important;
+    color: #ffffff !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+a.blog-link i, .blog-body a.blog-link i { color: #ffffff !important; }
+a.blog-link:hover, .blog-body a.blog-link:hover {
+    background: #ffffff !important;
+    border-color: rgba(47, 111, 237, 0.45) !important;
+    color: var(--blue) !important;
+}
+a.blog-link:hover i { color: var(--blue) !important; }
