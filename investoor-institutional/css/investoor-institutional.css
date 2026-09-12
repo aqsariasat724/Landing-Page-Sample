@@ -1008,3 +1008,110 @@ i.text-emerald,
 .hero-section .btn-primary.glow-btn:hover i, .hero-section .btn-primary.glow-btn:hover span,
 .calc-result-card .btn-primary.glow-btn:hover i, .calc-result-card .btn-primary.glow-btn:hover span,
 .pillar-card.featured .btn-pillar:hover i, .pillar-card.featured .btn-pillar:hover span { color: #ffffff !important; }
+
+
+
+
+/* ============================================================
+   BUTTON STATES SWAPPED (client request)
+   default = solid blue, hover = white
+   ============================================================ */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-outline,
+.glass-btn,
+.glow-btn,
+.btn-pillar,
+.btn-pillar-cyan,
+.btn-pillar-emerald,
+.btn-pillar-purple,
+.btn-advice-amber,
+.btn-partner-secondary,
+.section-theme-light .btn,
+.section-theme-light .btn-primary,
+.plan-card .btn-pillar,
+.calc-result-card .btn-primary,
+.hero-section .btn,
+.hero-section .btn-primary,
+.hero-section .btn-secondary,
+.cta-bottom-section .btn,
+.cta-bottom-section .btn-primary,
+.cta-bottom-section .btn-secondary,
+.partner-glow-card .btn,
+.partner-glow-card .btn-primary,
+.header .btn,
+.header .btn-primary,
+.drawer .btn,
+.drawer .btn-primary,
+.hero-section .btn-primary.glow-btn,
+.section-theme-light .btn-primary.glow-btn,
+.calc-result-card .btn-primary.glow-btn,
+.pillar-card.featured .btn-pillar,
+.pillar-card.featured .btn-pillar-cyan,
+.section-theme-light .pillar-card.featured .btn-pillar,
+.plan-card .btn-pillar.btn-pillar-cyan,
+.plan-card .btn-pillar.btn-pillar-emerald,
+.plan-card .btn-pillar.btn-pillar-purple {
+    background: var(--blue) !important;
+    border: 1px solid var(--blue) !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+.btn i, .btn span,
+.btn-primary i, .btn-primary span,
+.btn-pillar i, .btn-pillar span,
+.btn-advice-amber i, .btn-advice-amber span,
+.pillar-card.featured .btn-pillar i, .pillar-card.featured .btn-pillar span,
+.hero-section .btn-primary.glow-btn i, .hero-section .btn-primary.glow-btn span,
+.calc-result-card .btn-primary.glow-btn i, .calc-result-card .btn-primary.glow-btn span { color: #ffffff !important; }
+
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-outline:hover,
+.glass-btn:hover,
+.glow-btn:hover,
+.btn-pillar:hover,
+.btn-pillar-cyan:hover,
+.btn-pillar-emerald:hover,
+.btn-pillar-purple:hover,
+.btn-advice-amber:hover,
+.btn-partner-secondary:hover,
+.section-theme-light .btn:hover,
+.section-theme-light .btn-primary:hover,
+.plan-card .btn-pillar:hover,
+.calc-result-card .btn-primary:hover,
+.hero-section .btn:hover,
+.hero-section .btn-primary:hover,
+.hero-section .btn-secondary:hover,
+.cta-bottom-section .btn:hover,
+.cta-bottom-section .btn-primary:hover,
+.cta-bottom-section .btn-secondary:hover,
+.partner-glow-card .btn:hover,
+.partner-glow-card .btn-primary:hover,
+.header .btn:hover,
+.header .btn-primary:hover,
+.drawer .btn:hover,
+.drawer .btn-primary:hover,
+.hero-section .btn-primary.glow-btn:hover,
+.section-theme-light .btn-primary.glow-btn:hover,
+.calc-result-card .btn-primary.glow-btn:hover,
+.pillar-card.featured .btn-pillar:hover,
+.pillar-card.featured .btn-pillar-cyan:hover,
+.section-theme-light .pillar-card.featured .btn-pillar:hover,
+.plan-card .btn-pillar.btn-pillar-cyan:hover,
+.plan-card .btn-pillar.btn-pillar-emerald:hover,
+.plan-card .btn-pillar.btn-pillar-purple:hover {
+    background: #ffffff !important;
+    border-color: rgba(47, 111, 237, 0.45) !important;
+    color: var(--blue) !important;
+}
+.btn:hover i, .btn:hover span,
+.btn-primary:hover i, .btn-primary:hover span,
+.btn-pillar:hover i, .btn-pillar:hover span,
+.btn-advice-amber:hover i, .btn-advice-amber:hover span,
+.pillar-card.featured .btn-pillar:hover i, .pillar-card.featured .btn-pillar:hover span,
+.hero-section .btn-primary.glow-btn:hover i, .hero-section .btn-primary.glow-btn:hover span,
+.calc-result-card .btn-primary.glow-btn:hover i, .calc-result-card .btn-primary.glow-btn:hover span { color: var(--blue) !important; }
