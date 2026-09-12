@@ -1643,3 +1643,24 @@ body, p, li, span,
     color: #ffffff !important;
 }
 .switch-btn.active i, .pricing-tab.active i { color: #ffffff !important; }
+
+/* all tabs identical to the selected one (client request) */
+.switch-btn, .pricing-tab,
+.section-theme-light .switch-btn, .section-theme-light .pricing-tab,
+.switch-btn.active, .pricing-tab.active,
+.section-theme-light .switch-btn.active, .section-theme-light .pricing-tab.active {
+    background: #1f4fb5 !important;
+    border: 1px solid #1f4fb5 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+.switch-btn i, .pricing-tab i,
+.switch-btn.active i, .pricing-tab.active i { color: #ffffff !important; }
+.switch-btn:hover, .pricing-tab:hover,
+.switch-btn.active:hover, .pricing-tab.active:hover {
+    background: #ffffff !important;
+    border-color: rgba(31, 79, 181, 0.45) !important;
+    color: #1f4fb5 !important;
+}
+.switch-btn:hover i, .pricing-tab:hover i,
+.switch-btn.active:hover i, .pricing-tab.active:hover i { color: #1f4fb5 !important; }
