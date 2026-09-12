@@ -1450,3 +1450,38 @@ i.text-emerald,
 /* list ticks inside the product cards alternate as well */
 .pillar-card:nth-child(2) .pillar-features i,
 .pillar-card:nth-child(2) li i { color: #12706c !important; }
+
+/* ============================================================
+   Tabs follow the button system
+   active = solid blue, inactive = white with blue border
+   ============================================================ */
+.switch-btn, .pricing-tab,
+.section-theme-light .switch-btn, .section-theme-light .pricing-tab {
+    background: #ffffff !important;
+    border: 1px solid var(--blue) !important;
+    color: var(--blue) !important;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.switch-btn i, .pricing-tab i { color: var(--blue) !important; }
+.switch-btn:hover, .pricing-tab:hover {
+    background: rgba(47, 111, 237, 0.12) !important;
+    color: var(--blue) !important;
+}
+.switch-btn.active, .pricing-tab.active,
+.section-theme-light .switch-btn.active, .section-theme-light .pricing-tab.active {
+    background: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: #ffffff !important;
+}
+.switch-btn.active i, .pricing-tab.active i { color: #ffffff !important; }
+
+/* the containers around them stay quiet */
+.calc-type-switch, .pricing-tabs {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    gap: 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
