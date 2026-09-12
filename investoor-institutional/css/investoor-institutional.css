@@ -1115,3 +1115,33 @@ i.text-emerald,
 .pillar-card.featured .btn-pillar:hover i, .pillar-card.featured .btn-pillar:hover span,
 .hero-section .btn-primary.glow-btn:hover i, .hero-section .btn-primary.glow-btn:hover span,
 .calc-result-card .btn-primary.glow-btn:hover i, .calc-result-card .btn-primary.glow-btn:hover span { color: var(--blue) !important; }
+
+/* the fourth item wraps to two lines, so every title reserves the same height */
+.stats-glass-grid .number {
+    min-height: 2.8rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+.stats-glass-grid .stat-card { align-items: center; padding: 20px 26px; }
+.stats-glass-grid .stat-numbers { justify-content: center; }
+@media (max-width: 1200px) {
+    .stats-glass-grid .number { font-size: 1.02rem; }
+}
+
+/* one line per title so the four items read as one clean row */
+.stats-glass-grid .number { font-size: 1.02rem; min-height: 0; white-space: nowrap; }
+.stats-glass-grid .stat-card { padding: 22px 22px; min-height: 88px; }
+@media (max-width: 1280px) {
+    .stats-glass-grid .number { font-size: 0.96rem; }
+}
+@media (max-width: 992px) {
+    .stats-glass-grid .number { white-space: normal; font-size: 1.02rem; }
+}
+
+@media (max-width: 1320px) and (min-width: 993px) {
+    .stats-glass-grid .stat-card { padding: 18px 16px; gap: 11px; }
+    .stats-glass-grid .stat-icon-wrapper { width: 38px; height: 38px; flex: 0 0 38px; }
+    .stats-glass-grid .number { font-size: 0.92rem; }
+    .stats-glass-grid .label { font-size: 0.74rem; white-space: nowrap; }
+}
