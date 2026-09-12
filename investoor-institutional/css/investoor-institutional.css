@@ -847,3 +847,87 @@ i.text-emerald,
     background: #2a62d4 !important;
     border-color: #2a62d4 !important;
 }
+
+/* ============================================================
+   One button system for the whole page
+   primary  = solid accent blue, white label
+   secondary= soft blue, blue label
+   ============================================================ */
+
+/* primary actions on light sections */
+.section-theme-light .btn-primary,
+.section-theme-light .btn-primary.glow-btn,
+.plan-card .btn-pillar,
+.plan-card .btn-pillar-cyan,
+.plan-card .btn-pillar-purple,
+.plan-card .btn-pillar-emerald,
+.calc-result-card .btn-primary,
+.calc-action-row .btn-primary {
+    background: var(--blue) !important;
+    border: 1px solid var(--blue) !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+.section-theme-light .btn-primary i, .section-theme-light .btn-primary span,
+.plan-card .btn-pillar i, .plan-card .btn-pillar span,
+.calc-result-card .btn-primary i, .calc-result-card .btn-primary span { color: #ffffff !important; }
+
+.section-theme-light .btn-primary:hover,
+.plan-card .btn-pillar:hover,
+.calc-result-card .btn-primary:hover {
+    background: #2a62d4 !important;
+    border-color: #2a62d4 !important;
+    color: #ffffff !important;
+}
+
+/* secondary action: the advice button */
+.btn-advice-amber, .section-theme-light .btn-advice-amber {
+    background: rgba(47, 111, 237, 0.08) !important;
+    border: 1px solid rgba(47, 111, 237, 0.28) !important;
+    color: var(--blue) !important;
+}
+.btn-advice-amber i, .btn-advice-amber span { color: var(--blue) !important; }
+.btn-advice-amber:hover, .section-theme-light .btn-advice-amber:hover {
+    background: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: #ffffff !important;
+}
+.btn-advice-amber:hover i, .btn-advice-amber:hover span { color: #ffffff !important; }
+
+/* plan badges: readable tints instead of pale cyan on white */
+.plan-badge, .section-theme-light .plan-badge,
+.plan-badge.badge-cyan, .section-theme-light .plan-badge.badge-cyan {
+    background: rgba(47, 111, 237, 0.10) !important;
+    border: 1px solid rgba(47, 111, 237, 0.26) !important;
+    color: #2554b0 !important;
+}
+.plan-badge.badge-green, .section-theme-light .plan-badge.badge-green {
+    background: rgba(39, 183, 176, 0.12) !important;
+    border-color: rgba(39, 183, 176, 0.32) !important;
+    color: #12706c !important;
+}
+.plan-badge.badge-purple, .section-theme-light .plan-badge.badge-purple {
+    background: rgba(11, 31, 58, 0.06) !important;
+    border-color: var(--line) !important;
+    color: var(--navy) !important;
+}
+
+/* the hero primary was navy on deep navy, too flat */
+.hero-section .btn-primary, .hero-section .btn-primary.glow-btn {
+    background: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: #ffffff !important;
+}
+.hero-section .btn-primary:hover { background: #2a62d4 !important; border-color: #2a62d4 !important; }
+.drawer .btn-primary, .mobile-menu .btn-primary { background: var(--blue) !important; border-color: var(--blue) !important; }
+
+/* recommendation label on the popular plan */
+.popular-ribbon, .section-theme-light .popular-ribbon {
+    background: var(--navy) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+.plan-card.popular-plan { border-color: var(--blue) !important; }
