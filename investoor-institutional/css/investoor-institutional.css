@@ -1186,3 +1186,56 @@ i.text-emerald,
 }
 .pillar-icon-box i { color: var(--blue) !important; }
 .pillar-key-figure { color: var(--blue) !important; }
+
+/* ============================================================
+   Clearer lines everywhere (client request)
+   ============================================================ */
+
+/* every button keeps a defined edge */
+.btn, .btn-primary, .btn-secondary, .btn-outline, .glass-btn, .glow-btn,
+.btn-pillar, .btn-advice-amber, .btn-partner-secondary {
+    border: 1px solid #2559c9 !important;
+}
+.btn:hover, .btn-primary:hover, .btn-secondary:hover, .btn-outline:hover,
+.glass-btn:hover, .glow-btn:hover, .btn-pillar:hover, .btn-advice-amber:hover {
+    border-color: var(--blue) !important;
+}
+
+/* text links inside cards become visible buttons */
+.blog-read-more, .blog-card .read-more, .blog-body > a,
+.post-link, .card-link {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border: 1px solid rgba(47, 111, 237, 0.45) !important;
+    border-radius: 10px;
+    color: var(--blue) !important;
+    font-weight: 600;
+    background: #ffffff;
+}
+.blog-read-more:hover, .blog-card .read-more:hover, .blog-body > a:hover,
+.post-link:hover, .card-link:hover {
+    background: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: #ffffff !important;
+}
+
+/* card outlines one step stronger */
+.stats-glass-grid,
+.pillar-card, .service-box, .plan-card, .faq-item, .testimonial-card, .blog-card,
+.step-card, .calculator-glass-box, .calc-result-card, .commission-showcase-box,
+.modal-content, .price-foot,
+.section-theme-light .pillar-card, .section-theme-light .plan-card,
+.section-theme-light .faq-item, .section-theme-light .testimonial-card,
+.section-theme-light .blog-card, .section-theme-light .service-box,
+.section-theme-light .step-card {
+    border: 1px solid rgba(47, 111, 237, 0.30) !important;
+}
+.faq-item, .section-theme-light .faq-item { border-width: 1px !important; }
+.pillar-card:hover, .plan-card:hover, .service-box:hover, .blog-card:hover,
+.testimonial-card:hover, .faq-item:hover, .step-card:hover {
+    border-color: rgba(47, 111, 237, 0.55) !important;
+}
+
+.blog-body > a, .blog-read-more, .post-link, .card-link { align-self: flex-start; width: auto; }
