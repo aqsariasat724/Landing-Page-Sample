@@ -1511,3 +1511,39 @@ i.text-emerald,
     background: linear-gradient(145deg, #35c9c2 0%, #1e4fb8 100%);
 }
 .hero-trust-list .trust-pill span:last-child { color: rgba(255, 255, 255, 0.90) !important; font-weight: 500; }
+
+/* ============================================================
+   Body text darker for readability
+   (same grey family, one step deeper than #667085)
+   ============================================================ */
+:root { --ink: #475467; }
+
+body, p, li, span,
+.section-desc, .section-subtitle-text, .pillar-desc, .service-desc, .plan-sub,
+.plan-note, .spec-row span, .faq-answer, .faq-item p, .blog-excerpt,
+.testimonial-text, .step-desc, .callout-text, .label, .b-label, .res-subtitle,
+.footer-about-text, .price-foot p, .stats-glass-grid .label,
+.section-theme-light p, .section-theme-light li, .section-theme-light .section-desc {
+    color: #475467 !important;
+}
+.section-title, .hero-title, h1, h2, h3, h4, h5,
+.plan-title, .pillar-title, .service-title, .faq-question,
+.number, .price-val, .res-amount, .cs-val, strong, b {
+    color: var(--navy) !important;
+}
+.spec-row strong, .b-value, .plan-specs strong { color: var(--navy) !important; }
+a:not(.btn):not(.nav-link) { color: var(--blue) !important; }
+
+/* the dark blocks keep their light text */
+.hero-section p, .hero-section li, .hero-section span,
+.cta-bottom-section p, .cta-bottom-section span,
+.partner-glow-card p, .partner-glow-card span,
+.footer p, .footer li, .footer span, .footer a,
+.top-bar span, .market-strip span {
+    color: rgba(255, 255, 255, 0.86) !important;
+}
+.hero-section .hero-title, .cta-bottom-section h2, .partner-glow-card h2,
+.footer h4 { color: #ffffff !important; }
+.footer-bottom, .footer-bottom p, .footer-bottom span { color: rgba(255, 255, 255, 0.62) !important; }
+.q-name { color: rgba(255, 255, 255, 0.66) !important; }
+.market-note { color: rgba(255, 255, 255, 0.52) !important; }
