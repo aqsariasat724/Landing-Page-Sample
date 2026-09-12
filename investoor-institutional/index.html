@@ -31,12 +31,21 @@
 
 <div class="top-bar">
     <div class="container top-bar-inner">
-        <div class="top-bar-left">
-            <span class="top-fact"><i class="fa-solid fa-building-columns"></i> Investoor Mentoring Ltd · London</span>
-            <span class="top-fact"><i class="fa-solid fa-shield-halved"></i> BaFin &amp; EU-Standards</span>
+        <div class="market-strip">
+            <span class="market-label">Märkte</span>
+            <div class="market-viewport">
+                <div class="market-track" id="marketTrack">
+                    <span class="quote" data-symbol="DAX"><span class="q-name">DAX 40</span> <b class="q-val">18.250,00</b> <span class="q-chg up">+0,85 %</span></span>
+                    <span class="quote" data-symbol="SPX"><span class="q-name">S&amp;P 500</span> <b class="q-val">5.602,00</b> <span class="q-chg up">+0,42 %</span></span>
+                    <span class="quote" data-symbol="XAU"><span class="q-name">Gold</span> <b class="q-val">2.419,00</b> <span class="q-chg up">+0,31 %</span></span>
+                    <span class="quote" data-symbol="EURUSD"><span class="q-name">EUR/USD</span> <b class="q-val">1,0871</b> <span class="q-chg up">+0,09 %</span></span>
+                    <span class="quote" data-symbol="BTC"><span class="q-name">Bitcoin</span> <b class="q-val">64.090</b> <span class="q-chg down">-0,45 %</span></span>
+                </div>
+            </div>
+            <span class="market-note" id="marketNote">Kurse verzögert</span>
         </div>
         <div class="top-bar-right">
-            <span class="top-fact"><i class="fa-solid fa-percent"></i> Festanlage bis 14,00 % p.a.</span>
+            <span class="top-fact"><i class="fa-solid fa-shield-halved"></i> BaFin &amp; EU-Standards</span>
             <span class="top-fact"><i class="fa-solid fa-headset"></i> Persönliche Betreuung, Mo bis Fr</span>
         </div>
     </div>
@@ -1295,6 +1304,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
+<script src="market.js" defer></script>
 <script src="preview-i18n.js"></script>
 </body>
 </html>
