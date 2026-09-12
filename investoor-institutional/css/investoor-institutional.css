@@ -1692,3 +1692,28 @@ body, p, li, span,
 #langDropdown .dropdown-trigger:hover .lang-code,
 #langDropdown .dropdown-trigger:hover span,
 #langDropdown .dropdown-trigger:hover i { color: #1f4fb5 !important; }
+
+/* tabs styled like the term field: light blue fill, blue outline, blue text */
+.switch-btn, .pricing-tab,
+.section-theme-light .switch-btn, .section-theme-light .pricing-tab,
+.switch-btn.active, .pricing-tab.active,
+.section-theme-light .switch-btn.active, .section-theme-light .pricing-tab.active {
+    background: rgba(47, 111, 237, 0.16) !important;
+    border: 2px solid rgb(47, 111, 237) !important;
+    border-radius: 10px !important;
+    color: #12306b !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    padding: 13px 20px !important;
+    box-shadow: rgba(47, 111, 237, 0.12) 0 0 0 3px, rgba(47, 111, 237, 0.45) 0 4px 14px -6px !important;
+}
+.switch-btn i, .pricing-tab i,
+.switch-btn.active i, .pricing-tab.active i { color: rgb(47, 111, 237) !important; }
+.switch-btn:hover, .pricing-tab:hover,
+.switch-btn.active:hover, .pricing-tab.active:hover {
+    background: rgba(47, 111, 237, 0.24) !important;
+    border-color: rgb(47, 111, 237) !important;
+    color: #0b2559 !important;
+}
+.switch-btn:hover i, .pricing-tab:hover i,
+.switch-btn.active:hover i, .pricing-tab.active:hover i { color: rgb(47, 111, 237) !important; }
