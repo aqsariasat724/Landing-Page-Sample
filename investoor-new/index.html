@@ -1334,30 +1334,39 @@
         <script type="application/json" id="investoorNewI18n">{"rangeLabel":"Gewünschtes Anlagekapital:","rangeLabelTrade":"Gewünschtes Sparplan-Kapital:","resultTitle":"Jährliche Gesamtauszahlung","resultTitleTrade":"Jährliche Gesamtauszahlung (14,00% p.a.)","netGainSuffix":"Nettoergebnis","tradeShareSuffix":"Nettoergebnis (14,00% p.a.)","perMonth":"\/ Monat","modalBvLabel":"Business Volume (BV):","modalRefLabel":"Partner-Provision:","modalRefSuffix":"auf alle vermittelten Konten (Lifetime).","modalNote":"Details erhalten Sie nach der Registrierung im Partner-Dashboard."}</script>
     <script src="js/investoor-new.js"></script>
     
+
 <script>
-/* preview only: language entries switch the label instead of leaving the page */
-document.addEventListener('click', function (e) {
-    var a = e.target.closest ? e.target.closest('a[data-lang]') : null;
-    if (!a) return;
-    e.preventDefault();
-    var code = a.getAttribute('data-lang').toUpperCase();
-    var menu = a.closest('.dropdown-menu');
-    var box = menu ? menu.parentNode : null;
-    var label = box ? box.querySelector('.lang-code') : null;
-    var flag = box ? box.querySelector('button .lang-flag') : null;
-    var srcFlag = a.querySelector('.lang-flag');
-    if (label) label.textContent = code;
-    if (flag && srcFlag) flag.src = srcFlag.src;
-    if (menu) {
-        menu.querySelectorAll('li').forEach(function (li) { li.classList.remove('active'); });
-        var li = a.closest('li');
-        if (li) li.classList.add('active');
-        menu.classList.remove('show', 'open');
-    }
-    if (box) {
-        var trigger = box.querySelector('.dropdown-trigger');
-        if (trigger) trigger.setAttribute('aria-expanded', 'false');
-    }
+/* Preview only. The page JS calls stopPropagation on the language dropdown, so the
+   handler is bound to each entry directly. On investoor.de these links keep their
+   real target from data-live-href. */
+document.addEventListener('DOMContentLoaded', function () {
+    var links = document.querySelectorAll('a[data-lang]');
+    links.forEach(function (a) {
+        a.addEventListener('click', function (e) {
+            e.preventDefault();
+            var dropdown = a.closest('.custom-dropdown') ||
+                           (a.closest('.dropdown-menu') || {}).parentNode;
+            var code = a.getAttribute('data-lang').toUpperCase();
+            var srcFlag = a.querySelector('.lang-flag');
+
+            if (dropdown) {
+                var label = dropdown.querySelector('.lang-code');
+                var flag = dropdown.querySelector('.dropdown-trigger .lang-flag');
+                if (label) label.textContent = code;
+                if (flag && srcFlag) flag.src = srcFlag.src;
+
+                dropdown.querySelectorAll('.dropdown-menu li').forEach(function (li) {
+                    li.classList.remove('active');
+                });
+                var li = a.closest('li');
+                if (li) li.classList.add('active');
+
+                dropdown.classList.remove('is-open');
+                var trigger = dropdown.querySelector('.dropdown-trigger');
+                if (trigger) trigger.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
 });
 </script>
 </body>
