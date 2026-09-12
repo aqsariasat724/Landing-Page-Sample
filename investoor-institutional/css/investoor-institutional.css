@@ -1269,3 +1269,8 @@ i.text-emerald,
 .hero-section .metric-box, .hero-section .mini-chart-container {
     border: 1px solid rgba(255, 255, 255, 0.16) !important;
 }
+
+/* the logo should feel clickable */
+.brand-logo { cursor: pointer; transition: opacity 0.18s ease; display: inline-flex; align-items: center; }
+.brand-logo:hover { opacity: 0.82; }
+.brand-logo img { pointer-events: none; }
