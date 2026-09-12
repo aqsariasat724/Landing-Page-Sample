@@ -8,6 +8,20 @@ window.INV_PREVIEW_I18N = (function () {
     "use strict";
 
     var EN = {
+        /* wording softened for the institutional direction */
+        "Investoor Mentoring Ltd · London": "Investoor Mentoring Ltd · London",
+        "Festanlage bis 14,00 % p.a.": "Fixed deposit up to 14.00 % p.a.",
+        "Persönliche Betreuung, Mo bis Fr": "Personal support, Mon to Fri",
+        "Kapitalentwicklung (illustrativ)": "Capital development (illustrative)",
+        "Beispielhafter Verlauf": "Illustrative curve",
+        "Investoor Konto": "Investoor account",
+        "Empfohlen": "Recommended",
+        "Gewinnbeteiligung:": "Profit share:",
+        "Prüfungsphase:": "Evaluation phase:",
+        "Keine": "None",
+        "Vertraglich fixiert": "Contractually fixed",
+        "Anleger (500.000 € Konto)": "Investor (500,000 € account)",
+
         /* top bar */
         "LIVE MÄRKTE:": "LIVE MARKETS:",
         "FESTGELD P.A.": "FIXED DEPOSIT P.A.",

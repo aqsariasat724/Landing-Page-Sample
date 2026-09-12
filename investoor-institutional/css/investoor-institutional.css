@@ -692,3 +692,62 @@ i.text-emerald,
 .calc-result-card .text-emerald { color: #12706c !important; }
 .calc-select-caret { color: var(--blue); }
 .btn-partner-secondary i { color: #ffffff; }
+
+/* ============================================================
+   Calm top bar instead of the market ticker
+   ============================================================ */
+.top-bar {
+    background: var(--navy-deep);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.top-bar-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; min-height: 40px; flex-wrap: wrap;
+}
+.top-bar-left, .top-bar-right { display: flex; align-items: center; gap: 26px; }
+.top-fact {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.78rem; color: rgba(255, 255, 255, 0.72); white-space: nowrap;
+}
+.top-fact i { color: var(--blue); font-size: 0.82rem; }
+@media (max-width: 900px) {
+    .top-bar-right { display: none; }
+    .top-bar-left { gap: 18px; }
+}
+@media (max-width: 560px) {
+    .top-fact:not(:first-child) { display: none; }
+}
+
+/* hero card without the live-trading signals */
+.card-title-pill { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); }
+.mini-chart-container { box-shadow: none; }
+.mini-chart-container svg, .mini-chart-container canvas { filter: none; }
+
+/* recommendation label instead of the star ribbon */
+.card-ribbon, .ribbon-popular {
+    background: var(--navy);
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    box-shadow: none;
+    border-radius: 6px;
+    padding: 4px 12px;
+}
+
+/* the status chip is gone, so the title sits next to the dots */
+.card-header-bar { justify-content: flex-start; gap: 12px; }
+.card-title-pill {
+    background: none;
+    border: none;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.70);
+    letter-spacing: 0.08em;
+}
+.card-title-pill i { color: var(--blue); }
+
+.section-theme-light .card-ribbon {
+    background: var(--navy);
+    color: #ffffff;
+    border: none;
+    letter-spacing: 0.04em;
+}
