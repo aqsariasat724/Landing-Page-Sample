@@ -1415,3 +1415,38 @@ i.text-emerald,
 .faq-question, .faq-item button { color: var(--navy) !important; font-weight: 600; }
 .faq-question i, .faq-item button i { color: var(--blue) !important; }
 .faq-answer, .faq-item p { color: var(--ink) !important; }
+
+/* ============================================================
+   Icons get colour back, inside the palette
+   ============================================================ */
+/* hero trust points: alternating accent colours, brighter on navy */
+.hero-section .trust-pill .text-emerald,
+.hero-section .trust-pill .text-emerald i { color: #5fd2cc !important; }
+.hero-section .trust-pill .text-cyan,
+.hero-section .trust-pill .text-cyan i { color: #7fa8ff !important; }
+.hero-section .trust-pill .text-amber,
+.hero-section .trust-pill .text-amber i { color: #5fd2cc !important; }
+.hero-section .trust-pill .text-purple,
+.hero-section .trust-pill .text-purple i { color: #7fa8ff !important; }
+.hero-section .trust-pill i { font-size: 0.95rem; }
+.hero-section .trust-pill span { color: rgba(255, 255, 255, 0.86) !important; }
+
+/* light sections: icons alternate blue and turquoise instead of one flat tone */
+.section-theme-light .pillar-card:nth-child(2) .pillar-icon-box,
+.section-theme-light .service-box:nth-child(2) .service-icon,
+.section-theme-light .step-card:nth-child(2) .step-icon,
+.stats-glass-grid .stat-card:nth-child(2) .stat-icon-wrapper,
+.stats-glass-grid .stat-card:nth-child(4) .stat-icon-wrapper {
+    background: rgba(39, 183, 176, 0.12) !important;
+    border-color: rgba(39, 183, 176, 0.30) !important;
+    color: #12706c !important;
+}
+.section-theme-light .pillar-card:nth-child(2) .pillar-icon-box i,
+.section-theme-light .service-box:nth-child(2) .service-icon i,
+.section-theme-light .step-card:nth-child(2) .step-icon i,
+.stats-glass-grid .stat-card:nth-child(2) .stat-icon-wrapper i,
+.stats-glass-grid .stat-card:nth-child(4) .stat-icon-wrapper i { color: #12706c !important; }
+
+/* list ticks inside the product cards alternate as well */
+.pillar-card:nth-child(2) .pillar-features i,
+.pillar-card:nth-child(2) li i { color: #12706c !important; }
