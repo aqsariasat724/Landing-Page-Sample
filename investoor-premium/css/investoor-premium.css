@@ -1,0 +1,976 @@
+/* ============================================================
+   Investoor  |  investoor-premium.css
+   Premium Design Direction — typography, spacing, colour
+   discipline and visual hierarchy.
+
+   Loaded after investoor-institutional.css, which keeps the
+   approved colour system. This file adds the design language:
+   one accent colour, calmer type, more breathing room,
+   neutral card outlines, numbers with their own moment.
+
+   The original stylesheet (investor-new.css) is still untouched.
+   ============================================================ */
+
+:root {
+    /* ---- type scale ---------------------------------------
+       H1   56-64 / 600-700
+       H2   40-48 / 600
+       H3   22-26 / 600
+       body 16-18 / 400
+       label 12-14 / 500-600                                 */
+    --fs-h1: 58px;
+    --fs-h2: 42px;
+    --fs-h3: 23px;
+    --fs-body: 17px;
+    --fs-body-sm: 16px;
+    --fs-label: 13px;
+    --fs-number-lg: 34px;
+    --fs-number-md: 26px;
+
+    --w-h1: 600;
+    --w-h2: 600;
+    --w-h3: 600;
+    --w-body: 400;
+    --w-label: 600;
+
+    /* ---- spacing scale ------------------------------------
+       120  between major sections
+       64   inside a section, header to content
+       36/32 card padding                                     */
+    --section-pad-y: 120px;
+    --section-pad-y-sm: 80px;
+    --space-header: 64px;
+    --card-pad-y: 36px;
+    --card-pad-x: 32px;
+
+    /* ---- surfaces -----------------------------------------
+       one neutral hairline, no blue outlines                 */
+    --hairline: #e6eaf0;
+    --hairline-strong: #d6dce7;
+    --radius-card: 18px;
+
+    --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.04),
+                   0 10px 28px -20px rgba(11, 31, 58, 0.28);
+    --shadow-card-hover: 0 1px 2px rgba(16, 24, 40, 0.05),
+                         0 18px 40px -24px rgba(11, 31, 58, 0.34);
+
+    /* ---- motion: 200-400ms, nothing that announces itself - */
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --t-fast: 200ms var(--ease);
+    --t-base: 260ms var(--ease);
+    --transition-fast: border-color 260ms cubic-bezier(0.4, 0, 0.2, 1),
+                       box-shadow 260ms cubic-bezier(0.4, 0, 0.2, 1),
+                       background-color 260ms cubic-bezier(0.4, 0, 0.2, 1),
+                       color 260ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* ============================================================
+   1. TYPOGRAPHY — less bold, more hierarchy
+   ============================================================ */
+
+body {
+    font-size: var(--fs-body);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+.hero-title {
+    font-size: var(--fs-h1);
+    font-weight: var(--w-h1);
+    line-height: 1.1;
+    letter-spacing: -1.2px;
+    margin-bottom: 22px;
+}
+
+.section-title,
+.cta-title,
+.partner-title,
+.calc-title,
+h2 {
+    font-size: var(--fs-h2);
+    font-weight: var(--w-h2);
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+}
+
+/* every third-level heading lands in the same band, 22-26px,
+   so nothing in the middle of the page shouts louder than the rest */
+.pillar-title,
+.service-title,
+.plan-title,
+.step-title,
+.blog-title,
+.modal-title,
+.callout-title,
+.faq-question,
+.footer-col h4,
+h3 {
+    font-size: var(--fs-h3) !important;
+    font-weight: var(--w-h3) !important;
+    line-height: 1.35;
+    letter-spacing: -0.2px;
+}
+
+/* body copy was sitting at 14-15px inside cards, below the 16-18 band */
+.section-desc,
+.hero-description,
+.pillar-desc,
+.service-desc,
+.step-desc,
+.testimonial-text,
+.blog-excerpt,
+.faq-answer,
+.faq-answer p,
+.partner-desc,
+.cta-desc,
+.plan-note,
+.footer-about-text {
+    font-size: var(--fs-body) !important;
+    font-weight: var(--w-body);
+    line-height: 1.7;
+}
+.pillar-desc,
+.service-desc,
+.step-desc,
+.blog-excerpt {
+    font-size: var(--fs-body-sm) !important;
+}
+
+/* labels: quieter than a heading, 12-14 / 500-600, less tracking */
+.section-subtitle,
+.plan-badge,
+.trust-pill,
+.label,
+.b-label,
+.m-label,
+.dash-label,
+.perk-label,
+.tier-label,
+.chart-tag,
+.partner-badge,
+.stat-numbers .label {
+    font-size: var(--fs-label) !important;
+    font-weight: var(--w-label) !important;
+    letter-spacing: 0.4px !important;
+}
+.section-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 1px !important;
+}
+
+/* the eyebrow above a section title no longer needs a pill around it */
+.section-subtitle,
+.eyebrow,
+.section-label {
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+    color: var(--ink) !important;
+    margin-bottom: 14px;
+}
+
+.section-header { margin-bottom: var(--space-header); }
+.section-title  { margin-bottom: 18px; }
+
+
+/* ============================================================
+   2. NUMBERS — large only where they genuinely matter
+   ============================================================ */
+
+/* the four figures under the hero were 16px and read as body text */
+.stats-glass-grid .stat-numbers .number {
+    font-size: var(--fs-number-md) !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.6px;
+    color: var(--navy) !important;
+    margin-bottom: 6px;
+}
+.stats-glass-grid .stat-numbers .label {
+    color: var(--ink) !important;
+    letter-spacing: 0.3px !important;
+}
+
+/* each product card gets one figure that carries the card */
+.pillar-key-figure {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: 1.45;
+    color: var(--navy) !important;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--hairline) !important;
+}
+
+.metric-value,
+.result-value,
+.res-value,
+.price-val {
+    font-weight: 600 !important;
+    letter-spacing: -0.6px;
+}
+
+
+/* ============================================================
+   3. SPACING — premium design needs breathing room
+   ============================================================ */
+
+.hero-section { padding: 120px 0 140px !important; }
+
+/* this band was 28px top / 8px bottom and sat squashed under the hero */
+.stats-banner-section { padding: var(--section-pad-y-sm) 0 !important; }
+
+.pillars-section, .services-section, .how-it-works-section,
+.calculator-section, .pricing-section, .testimonials-section,
+.blog-section, .partner-section, .faq-section {
+    padding: var(--section-pad-y) 0 !important;
+}
+.cta-bottom-section { padding: var(--section-pad-y) 0 !important; }
+
+/* one card padding across the page instead of 22 / 24 / 32 / 36 / 40 */
+.pillar-card,
+.service-box,
+.plan-card,
+.step-card,
+.testimonial-card,
+.calc-result-card,
+.commission-showcase-box,
+.info-card {
+    padding: var(--card-pad-y) var(--card-pad-x) !important;
+}
+.blog-card .blog-body,
+.blog-card .blog-content { padding: 28px 28px 32px !important; }
+.stats-glass-grid .stat-card { padding: 28px 26px !important; }
+
+.pillars-grid, .services-grid, .steps-grid,
+.testimonials-grid, .blog-grid, .pricing-grid {
+    gap: 28px;
+}
+
+
+/* ============================================================
+   4. SURFACES — off-white is the page, white is the content
+   ------------------------------------------------------------
+   Target balance: ~60% off-white, ~18% white, navy for authority.
+   Previously white sections alternated with off-white ones, which
+   made white the dominant colour of the page.
+   ============================================================ */
+
+body { background: var(--offwhite); }
+
+.pillars-section,
+.how-it-works-section,
+.testimonials-section,
+.faq-section,
+.stats-banner-section,
+.services-section,
+.calculator-section,
+.pricing-section,
+.blog-section,
+.partner-section {
+    background: var(--offwhite) !important;
+}
+
+
+/* ============================================================
+   5. CARDS — minimal, one neutral hairline, subtle shadow
+   ------------------------------------------------------------
+   The blue 0.42 outline on every card is what made the page read
+   as a marketing site. One #E6EAF0 hairline instead.
+   ============================================================ */
+
+.stats-glass-grid,
+.pillar-card, .service-box, .plan-card, .faq-item, .testimonial-card,
+.blog-card, .step-card, .calculator-glass-box, .calc-result-card,
+.commission-showcase-box, .modal-content, .price-foot, .metric-box,
+.mini-chart-container, .info-card,
+.section-theme-light .pillar-card, .section-theme-light .plan-card,
+.section-theme-light .faq-item, .section-theme-light .testimonial-card,
+.section-theme-light .blog-card, .section-theme-light .service-box,
+.section-theme-light .step-card, .section-theme-light .calc-result-card {
+    background: var(--paper) !important;
+    border: 1px solid var(--hairline) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: var(--shadow-card) !important;
+}
+
+.stats-glass-grid .stat-card:not(:last-child) {
+    border-right: 1px solid var(--hairline) !important;
+}
+
+.pillar-card:hover, .plan-card:hover, .service-box:hover,
+.blog-card:hover, .testimonial-card:hover, .faq-item:hover,
+.step-card:hover {
+    border-color: var(--hairline-strong) !important;
+    box-shadow: var(--shadow-card-hover) !important;
+    transform: none !important;
+}
+
+/* the one highlighted card is marked by navy, not by a louder blue */
+.pillar-card.featured,
+.plan-card.popular-plan,
+.plan-card.featured,
+.plan-card.is-popular {
+    border-color: var(--navy) !important;
+}
+
+/* icon chips: quiet, no gradient, no colour per card */
+.stat-icon-wrapper,
+.step-icon, .service-icon, .pillar-icon, .pillar-icon-box,
+.author-avatar {
+    background: rgba(11, 31, 58, 0.04) !important;
+    border: 1px solid var(--hairline) !important;
+    color: var(--navy) !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+.stat-icon-wrapper i, .step-icon i, .service-icon i,
+.pillar-icon i, .pillar-icon-box i { color: var(--navy) !important; }
+
+/* fewer badges: the tone variants all collapse to one neutral chip */
+.plan-badge,
+.plan-badge.badge-green,
+.plan-badge.badge-purple,
+.plan-badge.badge-cyan {
+    background: rgba(11, 31, 58, 0.05) !important;
+    border: 1px solid var(--hairline) !important;
+    color: var(--navy) !important;
+}
+
+.faq-item { border-radius: var(--radius-card) !important; }
+.faq-question { background: transparent !important; }
+
+
+/* ============================================================
+   6. MOTION — 200-400ms, fade and a small lift, nothing more
+   ============================================================ */
+
+.pillar-card, .plan-card, .service-box, .blog-card, .testimonial-card,
+.faq-item, .step-card, .btn, .glow-btn, .btn-pillar, .nav-link {
+    transition: var(--transition-fast) !important;
+}
+
+.btn:hover, .glow-btn:hover, .btn-pillar:hover {
+    transform: none !important;
+}
+
+/* nothing on the page should float, pulse or blink on its own */
+.ambient-glow,
+.glow-1, .glow-2, .glow-3,
+.live-pill,
+.pulse, .pulse-dot, .blink {
+    animation: none !important;
+    display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+}
+
+
+/* ============================================================
+   7. RESPONSIVE — the scale steps down, the hierarchy does not
+   ============================================================ */
+
+@media (max-width: 1200px) {
+    :root {
+        --fs-h1: 48px;
+        --fs-h2: 38px;
+        --section-pad-y: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --fs-h1: 36px;
+        --fs-h2: 30px;
+        --fs-h3: 21px;
+        --fs-body: 16px;
+        --fs-body-sm: 15px;
+        --fs-number-md: 22px;
+        --section-pad-y: 80px;
+        --section-pad-y-sm: 56px;
+        --card-pad-y: 28px;
+        --card-pad-x: 24px;
+    }
+    .hero-section { padding: 88px 0 96px !important; }
+    .stats-glass-grid .stat-card:not(:last-child) { border-right: 0 !important; }
+}
+
+
+/* ============================================================
+   8. ONE VISUAL IDENTITY — no colour-per-message
+   ------------------------------------------------------------
+   The plan badges carried a colour per product family
+   (academy turquoise, Festanlage navy, trading blue). One
+   neutral chip instead; the product is told by the words in it.
+   Turquoise stays only where the brief allows it: small positive
+   indicators and success ticks.
+   ============================================================ */
+
+.plan-card[data-category="academy"] .plan-badge,
+.plan-card[data-category="festanlage"] .plan-badge,
+.plan-card[data-category="trading"] .plan-badge,
+.section-theme-light .plan-card[data-category="academy"] .plan-badge,
+.section-theme-light .plan-card[data-category="festanlage"] .plan-badge,
+.section-theme-light .plan-card[data-category="trading"] .plan-badge,
+.plan-card .badge-green,
+.plan-card .badge-cyan,
+.plan-card .badge-purple {
+    background: rgba(11, 31, 58, 0.05) !important;
+    border: 1px solid var(--hairline) !important;
+    color: var(--navy) !important;
+    font-weight: var(--w-label) !important;
+    letter-spacing: 0.4px !important;
+}
+
+
+/* ============================================================
+   9. SHADOWS AND RADII — the last heavy pieces
+   ============================================================ */
+
+.cta-glass-card {
+    box-shadow: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.10) !important;
+    border-radius: var(--radius-card) !important;
+    padding: 56px 48px !important;
+}
+.partner-glow-card,
+.main-dashboard-card,
+.visual-card,
+.modal-card,
+.modal-content {
+    border-radius: var(--radius-card) !important;
+    box-shadow: none !important;
+}
+.partner-glow-card { padding: 48px 44px !important; }
+
+/* no gradient panels left anywhere on the light page */
+.section-theme-light .pillar-card,
+.section-theme-light .plan-card,
+.section-theme-light .service-box,
+.section-theme-light .step-card,
+.section-theme-light .testimonial-card,
+.section-theme-light .blog-card,
+.section-theme-light .calc-result-card {
+    background-image: none !important;
+}
+
+
+/* ============================================================
+   10. DARK SECTIONS KEEP THEIR OWN SURFACES
+   ------------------------------------------------------------
+   The card rules above are written for the light page. Inside the
+   dark hero and the dark CTA band the panels stay dark, otherwise
+   white text lands on a white box.
+   ============================================================ */
+
+.hero-section .metric-box,
+.hero-section .mini-chart-container,
+.hero-section .visual-card,
+.hero-section .main-dashboard-card,
+.hero-section .info-card,
+.cta-bottom-section .metric-box,
+.cta-bottom-section .info-card,
+.partner-section .partner-glow-card .metric-box {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: none !important;
+    border-radius: 14px !important;
+}
+.hero-section .metric-value,
+.hero-section .metric-label,
+.hero-section .m-value,
+.hero-section .m-label,
+.hero-section .b-value,
+.hero-section .b-label,
+.hero-section .chart-tag,
+.hero-section .dash-label,
+.hero-section .tier-label { color: #ffffff !important; }
+.hero-section .metric-label,
+.hero-section .m-label,
+.hero-section .b-label,
+.hero-section .dash-label { color: rgba(255, 255, 255, 0.64) !important; }
+
+
+/* ============================================================
+   11. STATS BAND — one identity, one alignment
+   ------------------------------------------------------------
+   Cards 2 and 4 were given a turquoise icon as an alternating
+   accent. Under the new direction every icon is the same, and
+   the four items line up on one baseline.
+   ============================================================ */
+
+.stats-glass-grid .stat-card:nth-child(2) .stat-icon-wrapper,
+.stats-glass-grid .stat-card:nth-child(4) .stat-icon-wrapper,
+.stats-glass-grid .stat-icon-wrapper,
+.section-theme-light .stats-glass-grid .stat-icon-wrapper {
+    background: rgba(11, 31, 58, 0.04) !important;
+    border: 1px solid var(--hairline) !important;
+    background-image: none !important;
+}
+.stats-glass-grid .stat-card:nth-child(2) .stat-icon-wrapper i,
+.stats-glass-grid .stat-card:nth-child(4) .stat-icon-wrapper i,
+.stats-glass-grid .stat-icon-wrapper i,
+.section-theme-light .stats-glass-grid .stat-icon-wrapper i {
+    color: var(--navy) !important;
+}
+
+.stats-glass-grid .stat-card {
+    align-items: flex-start !important;
+    gap: 16px !important;
+}
+.stats-glass-grid .stat-numbers { min-height: 62px; }
+
+/* four items across one row: the figure stays prominent but must
+   still fit, so long word-values wrap instead of running out */
+.stats-glass-grid .stat-numbers .number {
+    font-size: 22px !important;
+    line-height: 1.28 !important;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+
+/* ============================================================
+   12. NO COLOUR PER CARD
+   ------------------------------------------------------------
+   The second card in each grid was given a turquoise icon and
+   turquoise ticks as an alternating accent, and the four hero
+   chips each had their own gradient. Under one visual identity
+   the structure is navy, the action is blue, and turquoise is
+   left for the success tick alone.
+   ============================================================ */
+
+.section-theme-light .pillar-card:nth-child(2) .pillar-icon-box,
+.section-theme-light .service-box:nth-child(2) .service-icon,
+.section-theme-light .step-card:nth-child(2) .step-icon,
+.pillar-icon-box, .service-icon, .step-icon, .pillar-icon,
+.section-theme-light .pillar-icon-box,
+.section-theme-light .service-icon,
+.section-theme-light .step-icon {
+    background: rgba(11, 31, 58, 0.04) !important;
+    background-image: none !important;
+    border: 1px solid var(--hairline) !important;
+    box-shadow: none !important;
+}
+.section-theme-light .pillar-card:nth-child(2) .pillar-icon-box i,
+.section-theme-light .service-box:nth-child(2) .service-icon i,
+.section-theme-light .step-card:nth-child(2) .step-icon i,
+.pillar-icon-box i, .service-icon i, .step-icon i, .pillar-icon i,
+.section-theme-light .pillar-icon-box i,
+.section-theme-light .service-icon i,
+.section-theme-light .step-icon i {
+    color: var(--navy) !important;
+}
+
+/* every feature tick is the same small positive indicator */
+.pillar-card:nth-child(2) .pillar-features i,
+.pillar-card:nth-child(2) li i,
+.pillar-features i,
+.pillar-card li i,
+.plan-card .spec-row i.fa-check,
+.section-theme-light .pillar-features i {
+    color: #17807b !important;
+}
+
+/* the eyebrow is supporting text, not a link */
+.section-subtitle,
+.section-subtitle i,
+.section-theme-light .section-subtitle,
+.section-theme-light .section-subtitle i,
+.section-subtitle.text-emerald,
+.section-theme-light .section-subtitle.text-emerald {
+    color: var(--ink) !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+/* hero chips: one quiet treatment instead of four gradients */
+.hero-trust-list .trust-pill:nth-child(1) > span:first-child,
+.hero-trust-list .trust-pill:nth-child(2) > span:first-child,
+.hero-trust-list .trust-pill:nth-child(3) > span:first-child,
+.hero-trust-list .trust-pill:nth-child(4) > span:first-child {
+    background: rgba(255, 255, 255, 0.10) !important;
+    background-image: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+}
+
+
+/* ============================================================
+   13. CONTROLS — blue marks the active state, nothing else
+   ------------------------------------------------------------
+   Every tab, select and input carried a blue fill, a 2px blue
+   border and a blue glow, so the selected tab looked exactly
+   like the unselected one. Blue now means action and active
+   state only; a resting control is a white field on a hairline.
+   ============================================================ */
+
+.calc-type-switch, .pricing-tabs {
+    background: var(--paper) !important;
+    border: 1px solid var(--hairline) !important;
+    border-radius: 12px !important;
+    padding: 4px !important;
+    box-shadow: none !important;
+    gap: 4px;
+}
+
+.switch-btn, .pricing-tab,
+.section-theme-light .switch-btn, .section-theme-light .pricing-tab {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 9px !important;
+    color: var(--ink) !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    padding: 11px 18px !important;
+    box-shadow: none !important;
+    transition: var(--transition-fast) !important;
+}
+.switch-btn i, .pricing-tab i,
+.section-theme-light .switch-btn i, .section-theme-light .pricing-tab i {
+    color: var(--ink) !important;
+}
+
+.switch-btn.active, .pricing-tab.active,
+.section-theme-light .switch-btn.active, .section-theme-light .pricing-tab.active {
+    background: var(--blue) !important;
+    border: 0 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+.switch-btn.active i, .pricing-tab.active i,
+.section-theme-light .switch-btn.active i,
+.section-theme-light .pricing-tab.active i { color: #ffffff !important; }
+
+.switch-btn:not(.active):hover, .pricing-tab:not(.active):hover {
+    background: rgba(11, 31, 58, 0.04) !important;
+    color: var(--navy) !important;
+}
+.switch-btn.active:hover, .pricing-tab.active:hover {
+    background: #1f4fb5 !important;
+    color: #ffffff !important;
+}
+
+/* fields rest on a hairline and turn blue only on focus */
+.custom-select, .calc-select-wrap select, .input-display-box {
+    background: var(--paper) !important;
+    border: 1px solid var(--hairline) !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+    color: var(--navy) !important;
+}
+.custom-select:hover, .calc-select-wrap select:hover,
+.input-display-box:hover {
+    border-color: var(--hairline-strong) !important;
+    background: var(--paper) !important;
+}
+.custom-select:focus, .calc-select-wrap select:focus,
+.input-display-box:focus-within {
+    border-color: var(--blue) !important;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.14) !important;
+}
+.calc-select-caret,
+.input-display-box .currency { color: var(--ink) !important; }
+.input-display-box input { font-weight: 600 !important; }
+
+/* the ribbon on the highlighted plan is structure, not an accent */
+.card-ribbon, .ribbon-popular {
+    background: var(--navy) !important;
+    border: 0 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+
+/* ============================================================
+   14. RESULT ROWS — one colour for the same kind of information
+   ------------------------------------------------------------
+   The three rows under the calculator result used a turquoise,
+   a green and an amber icon for three equally ordinary facts.
+   ============================================================ */
+
+.calc-result-card .b-label i,
+.calc-result-card .spec-row i,
+.calc-result-card .result-row i,
+.section-theme-light .calc-result-card .text-emerald,
+.section-theme-light .calc-result-card .text-emerald i,
+.section-theme-light .calc-result-card .text-cyan,
+.section-theme-light .calc-result-card .text-cyan i,
+.section-theme-light .calc-result-card .text-amber,
+.section-theme-light .calc-result-card .text-amber i,
+.section-theme-light .calc-result-card .text-purple,
+.section-theme-light .calc-result-card .text-purple i {
+    color: var(--ink) !important;
+}
+.calc-result-card .b-value,
+.section-theme-light .calc-result-card .b-value,
+.section-theme-light .calc-result-card .b-value.text-emerald {
+    color: var(--navy) !important;
+    font-weight: 600 !important;
+}
+
+/* the one positive indicator on the card may stay turquoise */
+.res-gain-badge {
+    background: rgba(39, 183, 176, 0.10) !important;
+    border: 1px solid rgba(39, 183, 176, 0.26) !important;
+    color: #12706c !important;
+    box-shadow: none !important;
+}
+
+
+/* ============================================================
+   15. PLAN SPECS — key figures read as navy, not as links
+   ============================================================ */
+
+.plan-card .spec-row span i.text-cyan,
+.plan-card .spec-row strong.text-cyan,
+.plan-card .spec-row .text-cyan,
+.spec-row strong.text-cyan,
+.plan-card .spec-row strong,
+.section-theme-light .plan-card .spec-row strong {
+    color: var(--navy) !important;
+}
+.plan-card .spec-row i,
+.plan-card .spec-row span i,
+.section-theme-light .plan-card .spec-row span i {
+    color: var(--ink) !important;
+}
+/* the highlighted payout row keeps its positive tone */
+.plan-card .spec-row.highlight-row strong,
+.plan-card .spec-row.highlight-row span,
+.plan-card .spec-row.highlight-row i,
+.section-theme-light .plan-card .spec-row.highlight-row strong {
+    color: #12706c !important;
+}
+
+
+/* ============================================================
+   16. BLOG AND TESTIMONIALS — headings are navy, ratings are quiet
+   ------------------------------------------------------------
+   Article headlines were blue because they are links. A headline
+   reads as a headline first: navy at rest, blue on hover.
+   The category chips carried three different colours; the star
+   rating was the only amber on the page.
+   ============================================================ */
+
+.blog-title,
+.blog-title a,
+.blog-card h3,
+.blog-card h3 a,
+.section-theme-light .blog-title,
+.section-theme-light .blog-title a {
+    color: var(--navy) !important;
+}
+.blog-title a:hover,
+.blog-card h3 a:hover { color: var(--blue) !important; }
+
+.blog-category,
+.section-theme-light .blog-category {
+    background: rgba(11, 31, 58, 0.55) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    color: #ffffff !important;
+    font-size: var(--fs-label) !important;
+    font-weight: var(--w-label) !important;
+    letter-spacing: 0.4px !important;
+}
+
+.t-stars i,
+.t-stars .fa-star,
+.testimonial-card .fa-star,
+.section-theme-light .t-stars i {
+    color: var(--navy) !important;
+    font-size: 12px !important;
+}
+
+
+/* ============================================================
+   17. NO COLOURED WORDS INSIDE HEADINGS
+   ------------------------------------------------------------
+   A headline is one voice. The highlighted half was turquoise,
+   which put a crypto-style accent on the largest type on the page.
+   ============================================================ */
+
+.partner-glow-card .gradient-text-green,
+.partner-title .gradient-text-green,
+.partner-glow-card .gradient-text,
+.gradient-text-green,
+.gradient-accent {
+    color: #ffffff !important;
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background-clip: border-box !important;
+}
+.section-theme-light .gradient-text-green,
+.section-theme-light .gradient-text,
+.section-theme-light .gradient-accent {
+    color: var(--navy) !important;
+    -webkit-text-fill-color: var(--navy) !important;
+}
+
+
+/* ============================================================
+   18. FOOTER — one identity down to the last icon
+   ------------------------------------------------------------
+   The four contact icons were turquoise, green, amber and purple.
+   ============================================================ */
+
+.footer-contact-list i,
+.footer-contact-list i.text-cyan,
+.footer-contact-list i.text-emerald,
+.footer-contact-list i.text-amber,
+.footer-contact-list i.text-purple,
+.footer-col i {
+    color: rgba(255, 255, 255, 0.45) !important;
+}
+.footer-nav a i,
+.footer-links a i { color: rgba(255, 255, 255, 0.35) !important; }
+
+.footer-heading,
+.footer-col h4 {
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0 !important;
+    color: #ffffff !important;
+}
+.footer-contact-list a,
+.footer-contact-list span,
+.footer-contact-list strong { font-size: 15px !important; }
+
+/* the footer icons were set per-link one level deeper, match it */
+.footer .footer-contact-list i,
+.footer .footer-contact-list i.text-cyan,
+.footer .footer-contact-list i.text-emerald,
+.footer .footer-contact-list i.text-amber,
+.footer .footer-contact-list i.text-purple {
+    color: rgba(255, 255, 255, 0.45) !important;
+}
+.footer .footer-nav a i,
+.footer .footer-links a i { color: rgba(255, 255, 255, 0.35) !important; }
+
+
+/* ============================================================
+   19. BUTTON HIERARCHY — one primary, one quiet second
+   ------------------------------------------------------------
+   Every button on the page had become the same solid blue, so a
+   hero offered two equally loud calls to action. Blue now marks
+   the primary action; the second option is a quiet outline.
+   ============================================================ */
+
+/* --- primary: the one blue button in view --- */
+.btn-primary,
+.glow-btn,
+.btn-pillar, .btn-pillar-cyan, .btn-pillar-emerald, .btn-pillar-purple,
+.section-theme-light .btn-primary,
+.plan-card .btn-pillar,
+.plan-card .btn-pillar.btn-pillar-cyan,
+.plan-card .btn-pillar.btn-pillar-emerald,
+.plan-card .btn-pillar.btn-pillar-purple,
+.calc-result-card .btn-primary,
+.hero-section .btn-primary,
+.hero-section .btn-primary.glow-btn,
+.section-theme-light .btn-primary.glow-btn,
+.calc-result-card .btn-primary.glow-btn,
+.pillar-card.featured .btn-pillar,
+.pillar-card.featured .btn-pillar-cyan,
+.section-theme-light .pillar-card.featured .btn-pillar,
+.cta-bottom-section .btn-primary,
+.partner-glow-card .btn-primary,
+.header .btn-primary, .drawer .btn-primary {
+    background: var(--blue) !important;
+    border: 1px solid var(--blue) !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+.btn-primary i, .btn-primary span,
+.glow-btn i, .glow-btn span,
+.btn-pillar i, .btn-pillar span,
+.hero-section .btn-primary.glow-btn i, .hero-section .btn-primary.glow-btn span,
+.section-theme-light .btn-primary.glow-btn i, .section-theme-light .btn-primary.glow-btn span,
+.calc-result-card .btn-primary.glow-btn i, .calc-result-card .btn-primary.glow-btn span,
+.pillar-card.featured .btn-pillar i, .pillar-card.featured .btn-pillar span {
+    color: #ffffff !important;
+}
+.btn-primary:hover, .glow-btn:hover, .btn-pillar:hover,
+.section-theme-light .btn:hover, .plan-card .btn-pillar:hover,
+.calc-result-card .btn-primary:hover,
+.hero-section .btn-primary.glow-btn:hover,
+.section-theme-light .btn-primary.glow-btn:hover,
+.pillar-card.featured .btn-pillar:hover {
+    background: #1f4fb5 !important;
+    border-color: #1f4fb5 !important;
+    color: #ffffff !important;
+}
+.btn-primary:hover i, .btn-primary:hover span,
+.glow-btn:hover i, .glow-btn:hover span,
+.btn-pillar:hover i, .btn-pillar:hover span { color: #ffffff !important; }
+
+/* --- secondary on a light section --- */
+.section-theme-light .btn-secondary,
+.section-theme-light .btn-outline,
+.section-theme-light .glass-btn,
+.btn-secondary, .btn-outline {
+    background: var(--paper) !important;
+    border: 1px solid var(--hairline-strong) !important;
+    color: var(--navy) !important;
+    box-shadow: none !important;
+}
+.btn-secondary i, .btn-secondary span,
+.btn-outline i, .btn-outline span { color: var(--navy) !important; }
+.section-theme-light .btn-secondary:hover,
+.section-theme-light .btn-outline:hover,
+.btn-secondary:hover, .btn-outline:hover {
+    background: var(--offwhite) !important;
+    border-color: var(--navy) !important;
+    color: var(--navy) !important;
+}
+
+/* --- secondary on a dark section --- */
+.hero-section .btn-secondary,
+.hero-section .glass-btn,
+.cta-bottom-section .btn-secondary,
+.cta-bottom-section .btn-outline,
+.cta-glass-card .btn-secondary,
+.cta-glass-card .btn-outline,
+.partner-glow-card .btn-partner-secondary,
+.btn-partner-secondary {
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.30) !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+.hero-section .btn-secondary i, .hero-section .btn-secondary span,
+.hero-section .glass-btn i, .hero-section .glass-btn span,
+.cta-bottom-section .btn-secondary i, .cta-bottom-section .btn-secondary span,
+.cta-glass-card .btn-outline i, .cta-glass-card .btn-outline span,
+.btn-partner-secondary i, .btn-partner-secondary span { color: #ffffff !important; }
+
+.hero-section .btn-secondary:hover,
+.hero-section .glass-btn:hover,
+.cta-bottom-section .btn-secondary:hover,
+.cta-glass-card .btn-outline:hover,
+.btn-partner-secondary:hover {
+    background: rgba(255, 255, 255, 0.10) !important;
+    border-color: rgba(255, 255, 255, 0.55) !important;
+    color: #ffffff !important;
+}
+.hero-section .btn-secondary:hover i, .hero-section .btn-secondary:hover span,
+.hero-section .glass-btn:hover i, .hero-section .glass-btn:hover span,
+.cta-bottom-section .btn-secondary:hover i,
+.cta-bottom-section .btn-secondary:hover span { color: #ffffff !important; }
+
+/* the header carries one blue action; the account link is quiet */
+.header .btn-outline.login-btn,
+.header .login-btn,
+.login-btn {
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.24) !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+.login-btn i, .login-btn span { color: #ffffff !important; }
+.header .login-btn:hover, .login-btn:hover {
+    background: rgba(255, 255, 255, 0.10) !important;
+    border-color: rgba(255, 255, 255, 0.45) !important;
+}
