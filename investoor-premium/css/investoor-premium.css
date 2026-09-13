@@ -974,3 +974,194 @@ body { background: var(--offwhite); }
     background: rgba(255, 255, 255, 0.10) !important;
     border-color: rgba(255, 255, 255, 0.45) !important;
 }
+
+
+/* ============================================================
+   20. THE PAGE RHYTHM THE DOC ASKS FOR
+   ------------------------------------------------------------
+   Point 3: off-white is the main page background.
+   Point 9: #071525 for one or two strategically important
+            sections only, with a few large clean statistics.
+   So the hero becomes off-white and the facts band directly
+   under it becomes the one dark block, with the closing CTA as
+   the second. Point 2: 100-140px between major sections, which
+   is 70px of padding on each side of the join.
+   ============================================================ */
+
+:root {
+    --section-pad-y: 70px;
+    --section-pad-y-sm: 70px;
+}
+
+/* ---------- hero, on off-white ---------- */
+.hero-section {
+    background: var(--offwhite) !important;
+    background-image: none !important;
+    padding: 96px 0 100px !important;
+}
+.hero-section .hero-title,
+.hero-section .hero-title .hero-capital,
+.hero-section h1,
+.hero-section .gradient-text {
+    color: var(--navy) !important;
+    -webkit-text-fill-color: var(--navy) !important;
+    background: none !important;
+}
+.hero-section .hero-products-line,
+.hero-section .hero-description,
+.hero-section .hero-supporting-line {
+    color: var(--ink) !important;
+}
+.hero-products-line {
+    font-size: var(--fs-h3) !important;
+    font-weight: 500 !important;
+    color: var(--ink) !important;
+    margin-bottom: 20px;
+}
+.hero-supporting-line {
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    color: var(--ink) !important;
+    letter-spacing: 0.2px;
+    margin: 28px 0 0 !important;
+}
+.hero-cta-group { margin-bottom: 0 !important; }
+
+/* the hero panel is a white card like every other card */
+.hero-section .visual-card,
+.hero-section .main-dashboard-card,
+.hero-section .mini-chart-container,
+.hero-section .metric-box,
+.hero-section .info-card {
+    background: var(--paper) !important;
+    border: 1px solid var(--hairline) !important;
+    box-shadow: var(--shadow-card) !important;
+}
+.hero-section .mini-chart-container {
+    background: var(--offwhite) !important;
+    box-shadow: none !important;
+}
+.hero-section .dash-amount,
+.hero-section .m-value,
+.hero-section .b-value,
+.hero-section .tier-val,
+.hero-section .card-title-pill { color: var(--navy) !important; }
+.hero-section .dash-label,
+.hero-section .m-label,
+.hero-section .m-sub,
+.hero-section .b-label,
+.hero-section .tier-label,
+.hero-section .chart-tag,
+.hero-section .chart-header span,
+.hero-section small { color: var(--ink) !important; }
+.hero-section .card-header-bar {
+    border-bottom: 1px solid var(--hairline) !important;
+}
+.hero-section .card-title-pill {
+    background: rgba(11, 31, 58, 0.04) !important;
+    border: 1px solid var(--hairline) !important;
+}
+.hero-section .card-title-pill i { color: var(--navy) !important; }
+
+/* the hero figure is the one number point 5 gives the hero */
+.hero-section .dash-amount {
+    font-size: 38px !important;
+    font-weight: 600 !important;
+    letter-spacing: -1px;
+    line-height: 1.15;
+}
+
+/* secondary button on a light hero */
+.hero-section .btn-secondary,
+.hero-section .glass-btn {
+    background: var(--paper) !important;
+    border: 1px solid var(--hairline-strong) !important;
+    color: var(--navy) !important;
+}
+.hero-section .btn-secondary i, .hero-section .btn-secondary span,
+.hero-section .glass-btn i, .hero-section .glass-btn span {
+    color: var(--navy) !important;
+}
+.hero-section .btn-secondary:hover,
+.hero-section .glass-btn:hover {
+    background: var(--offwhite) !important;
+    border-color: var(--navy) !important;
+}
+.hero-section .btn-secondary:hover i, .hero-section .btn-secondary:hover span,
+.hero-section .glass-btn:hover i, .hero-section .glass-btn:hover span {
+    color: var(--navy) !important;
+}
+
+/* ---------- the one dark band ---------- */
+.stats-banner-section,
+.stats-banner-section.section-theme-light {
+    background: var(--navy-deep) !important;
+    padding: 76px 0 !important;
+}
+.stats-banner-section .stats-glass-grid,
+.section-theme-light .stats-banner-section .stats-glass-grid {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+.stats-banner-section .stat-card {
+    border: 0 !important;
+    padding: 0 26px !important;
+}
+.stats-banner-section .stats-glass-grid .stat-card:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+.stats-banner-section .stats-glass-grid .stat-numbers .number,
+.section-theme-light .stats-banner-section .stat-numbers .number {
+    color: #ffffff !important;
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+}
+.stats-banner-section .stats-glass-grid .stat-numbers .label,
+.section-theme-light .stats-banner-section .stat-numbers .label {
+    color: rgba(255, 255, 255, 0.60) !important;
+}
+.stats-banner-section .stat-icon-wrapper,
+.stats-banner-section .stats-glass-grid .stat-icon-wrapper,
+.section-theme-light .stats-banner-section .stat-icon-wrapper {
+    background: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+.stats-banner-section .stat-icon-wrapper i,
+.stats-banner-section .stats-glass-grid .stat-icon-wrapper i,
+.section-theme-light .stats-banner-section .stat-icon-wrapper i {
+    color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+    .hero-section { padding: 72px 0 76px !important; }
+    .stats-banner-section { padding: 56px 0 !important; }
+    .stats-banner-section .stats-glass-grid .stat-numbers .number { font-size: 24px !important; }
+    .stats-banner-section .stats-glass-grid .stat-card:not(:last-child) { border-right: 0 !important; }
+}
+
+/* three facts across the dark band, each with room to breathe */
+.stats-banner-section .stats-glass-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+.stats-banner-section .stats-glass-grid .stat-numbers .number,
+.section-theme-light .stats-banner-section .stat-numbers .number {
+    font-size: 26px !important;
+    overflow-wrap: normal;
+    hyphens: none;
+}
+.stats-banner-section .stat-card { padding: 0 34px !important; }
+@media (max-width: 900px) {
+    .stats-banner-section .stats-glass-grid { grid-template-columns: 1fr !important; }
+    .stats-banner-section .stat-card { padding: 18px 0 !important; }
+}
+
+/* the two joins around the dark band were 176px and 146px; bring them
+   into the 100-140 band like every other join on the page */
+.hero-section { padding: 96px 0 70px !important; }
+.stats-banner-section,
+.stats-banner-section.section-theme-light { padding: 70px 0 !important; }
+@media (max-width: 768px) {
+    .hero-section { padding: 72px 0 56px !important; }
+    .stats-banner-section { padding: 56px 0 !important; }
+}
