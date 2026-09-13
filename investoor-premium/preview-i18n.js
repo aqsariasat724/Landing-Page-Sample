@@ -181,7 +181,7 @@ window.INV_PREVIEW_I18N = (function () {
         "Jährliche Auszahlung:": "Annual payout:",
         "Laufzeit:": "Term:",
         "İnvestieren": "Invest",
-        "⭐ BELIEBTESTES KONTO": "⭐ MOST POPULAR ACCOUNT",
+        "BELIEBTESTES KONTO": "MOST POPULAR ACCOUNT",
         "Trading Pro": "Trading Pro",
         "Trading 25.000": "Trading 25,000",
         "Trading 500.000": "Trading 500,000",

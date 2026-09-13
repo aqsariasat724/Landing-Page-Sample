@@ -1165,3 +1165,164 @@ body { background: var(--offwhite); }
     .hero-section { padding: 72px 0 56px !important; }
     .stats-banner-section { padding: 56px 0 !important; }
 }
+
+
+/* ============================================================
+   21. INNER PAGES
+   ------------------------------------------------------------
+   The sub-pages carry the same markup and the same stylesheet as
+   the homepage, so everything above applies to them unchanged.
+   Two things are theirs alone: their top-bar ticker sits in a
+   div with no container class, so it can push the page wider
+   than the viewport, and their page hero needs the same calm
+   treatment the homepage hero got.
+   ============================================================ */
+
+body { overflow-x: clip; }          /* clip, not hidden: hidden kills sticky */
+
+.top-bar > div {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.ticker-wrapper { max-width: 100%; min-width: 0; }
+.ticker-slider { flex: 1 1 0%; min-width: 0; }
+.ticker-label {
+    font-size: var(--fs-label) !important;
+    font-weight: var(--w-label) !important;
+    color: rgba(255, 255, 255, 0.55) !important;
+    letter-spacing: 0.4px !important;
+}
+.ticker-item .symbol { color: rgba(255, 255, 255, 0.72) !important; }
+.ticker-item .val { color: #ffffff !important; }
+.ticker-track { animation-duration: 70s !important; }
+
+/* ---------- page hero on the inner pages ---------- */
+.page-hero {
+    background: var(--offwhite) !important;
+    background-image: none !important;
+    padding: 96px 0 70px !important;
+    border-bottom: 0 !important;
+}
+.page-hero h1,
+.page-hero .page-title,
+.page-hero .hero-title {
+    color: var(--navy) !important;
+    -webkit-text-fill-color: var(--navy) !important;
+    background: none !important;
+    font-size: var(--fs-h1) !important;
+    font-weight: var(--w-h1) !important;
+    line-height: 1.1;
+    letter-spacing: -1.2px;
+}
+.page-hero p,
+.page-hero .page-desc,
+.page-hero .hero-description,
+.page-hero .breadcrumb,
+.page-hero .breadcrumb a,
+.page-hero li { color: var(--ink) !important; }
+.page-hero .breadcrumb a:hover { color: var(--blue) !important; }
+
+/* inner sections use the same rhythm as the homepage */
+.page-section,
+.inner-section,
+.content-section {
+    padding: var(--section-pad-y) 0 !important;
+    background: var(--offwhite) !important;
+}
+
+@media (max-width: 768px) {
+    .page-hero { padding: 72px 0 56px !important; }
+}
+
+
+/* ============================================================
+   22. FAQ ROWS
+   ------------------------------------------------------------
+   The doc lists FAQ cards under White. They were #EEF1F6 with a
+   blue outline, and the open row carried a full blue border,
+   which on the FAQ page is the loudest thing on screen.
+   The inner pages do not wrap their sections in
+   .section-theme-light, so the open state needs its own rule.
+   ============================================================ */
+
+.faq-item,
+.section-theme-light .faq-item,
+.faq-item.active, .faq-item.open, .faq-item.is-open,
+.section-theme-light .faq-item.active {
+    background: var(--paper) !important;
+    border: 1px solid var(--hairline) !important;
+}
+.faq-item:hover,
+.section-theme-light .faq-item:hover {
+    background: var(--paper) !important;
+    border-color: var(--hairline-strong) !important;
+}
+.faq-item.active,
+.faq-item.open,
+.faq-item.is-open,
+.section-theme-light .faq-item.active {
+    border-color: var(--navy) !important;
+}
+.faq-question, .faq-item button {
+    color: var(--navy) !important;
+    background: transparent !important;
+}
+.faq-question i, .faq-item button i { color: var(--ink) !important; }
+.faq-item.active .faq-question i,
+.faq-item.active .faq-icon { color: var(--blue) !important; }
+
+/* plan spec rows: the little leading icons are not interactive, so they are
+   not blue. The inner pages do not carry .section-theme-light, so the rule in
+   section 15 does not reach them. */
+.plan-card .spec-row i,
+.plan-card .spec-row span i,
+.plan-card .spec-row i.text-cyan,
+.plan-card .spec-row i.text-emerald,
+.plan-card .spec-row i.text-amber,
+.plan-card .spec-row i.text-purple,
+.plan-card .plan-specs i,
+.plan-card li i {
+    color: var(--ink) !important;
+}
+.plan-card .spec-row.highlight-row i,
+.plan-card .spec-row.highlight-row span i { color: #12706c !important; }
+
+/* his pricing cards carry a tone class (tone-cyan / tone-green / tone-purple)
+   whose rules are two classes deep and marked !important, so they outrank the
+   block above. One tone for all three, as point 3 asks. */
+.plan-card.tone-purple .spec-row span i,
+.plan-card.tone-cyan .spec-row span i,
+.plan-card.tone-green .spec-row span i,
+.plan-card.tone-purple .spec-row i,
+.plan-card.tone-cyan .spec-row i,
+.plan-card.tone-green .spec-row i {
+    color: var(--ink) !important;
+}
+.plan-card.tone-purple .plan-info-trigger,
+.plan-card.tone-purple .plan-info-trigger i,
+.plan-card.tone-cyan .plan-info-trigger,
+.plan-card.tone-cyan .plan-info-trigger i,
+.plan-card.tone-green .plan-info-trigger,
+.plan-card.tone-green .plan-info-trigger i {
+    color: var(--blue) !important;
+}
+.plan-card.tone-purple .plan-badge,
+.plan-card.tone-cyan .plan-badge,
+.plan-card.tone-green .plan-badge {
+    background: rgba(11, 31, 58, 0.05) !important;
+    border: 1px solid var(--hairline) !important;
+    color: var(--navy) !important;
+}
+.plan-card.tone-purple .spec-row.highlight-row span i,
+.plan-card.tone-cyan .spec-row.highlight-row span i,
+.plan-card.tone-green .spec-row.highlight-row span i { color: #12706c !important; }
+
+/* the ribbon on the highlighted plan: white on navy, no gold star */
+.card-ribbon i, .ribbon-popular i,
+.card-ribbon .fa-star, .ribbon-popular .fa-star,
+.plan-card .card-ribbon i {
+    color: #ffffff !important;
+    font-size: 11px !important;
+}
