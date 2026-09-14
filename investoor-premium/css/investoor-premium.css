@@ -1326,3 +1326,11 @@ body { overflow-x: clip; }          /* clip, not hidden: hidden kills sticky */
     color: #ffffff !important;
     font-size: 11px !important;
 }
+
+/* the "Noch Fragen?" block his build added after the FAQ was not in the list
+   above, so it sat on 70px joins while every other section had 140px */
+.faq-outro-section,
+.faq-outro-section.section-theme-light {
+    padding: var(--section-pad-y) 0 !important;
+    background: var(--offwhite) !important;
+}
